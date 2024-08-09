@@ -21,10 +21,10 @@ const Footer = () => {
   return (
     <>
     
-<section className='w-full relative'><div className='newsletter bg-[#00e0ce] lg:h-[300px] absolute top-[0] sm:h-[350px]
+<section className='w-full relative'><div className='newsletter bg-[#00e0ce] lg:h-[300px] absolute top-[0] sm:h-[350px] 
     clip-path-mynewsletter w-full
     m-b[3rem]'>
-      <div className='flex lg:flex-row justify-between items-center sm:flex-col lg:gap-16 sm:gap-6 p-10 lg:ml-8 sm:ml-2'>
+      <div className='flex lg:flex-row justify-between items-center sm:flex-col lg:gap-16 sm:gap-6 lg:p-10 sm:p-6 lg:ml-8 sm:ml-2'>
         <Image className='sm:hidden lg:block' src={letter} alt='letter'width={60}
       height={18}></Image>
 
@@ -77,9 +77,9 @@ const Footer = () => {
 
     <section className=' clip-path-mypolygon w-full bg-[#121417] text-[#fff] font-normal font-md tracking-tight absolute top-[250px] leading-6 min-h-[680px] h-full'>
         <div className='w-[80%] mt-10 ml-10 absolute top-[30px] '>
-        <div className='flex flex-row gap-40 justify-between items-center ml-4'>
+        <div className='flex lg:flex-row sm:flex-col lg:gap-40 sm:gap:20 justify-between items-center lg:ml-4 sm:ml-10'>
             <div className='flex flex-col gap-2'>
-                <h2 className='text-white font-bold tracking-tight leading-7'>Follow us on</h2>
+                <h2 className='text-white font-bold tracking-tight leading-7 sm:text-center'>Follow us on</h2>
                 <div className='flex flex-row gap-2'>
                 <div className='rounded-full p-2 bg-white border text-black '><FaFacebookF/></div>
                 <div className='rounded-full p-2 bg-white border text-black '>
@@ -102,7 +102,7 @@ const Footer = () => {
       
             </div>
             
-            <div className='flex flex-col text-white font-normal '>
+            <div className='flex flex-col text-white font-normal sm:hidden lg:block  '>
               <div className='flex flex-row gap-[8rem] ml-12 '>
                 <div className='flex flex-col gap-6 mt-10 '>
               <h1 className='font-extrabold'>Accommodation</h1>
@@ -143,7 +143,7 @@ const Footer = () => {
             </div>
             
         </div>
-        <div className='text-white flex flex-row gap-4 mt-5 '>
+        <div className='text-white flex flex-row gap-4 mt-5 sm:text-nowrap sm:leading-6 sm:flex-wrap sm:w-full sm:justify-center sm:items-center sm:pt-4'>
             <Link href='/' className=''>Data Protection Notice
             </Link>
             <Link href='/' className=''>Terms & Legal</Link>
