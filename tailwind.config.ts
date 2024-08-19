@@ -32,8 +32,8 @@ const config: Config = {
           '100%': { transform: 'translateX(0px) translateY(0px) rotate(-15deg)' },
         },
         wiggle2: {
-          '0%': { transform: 'translateX(-150px) translateY(300px) rotate(-15deg)' },
-          '100%': { transform: 'translateX(0px) translateY(0px) rotate(-15deg)' },
+          '0%': { transform: 'translateX(-150px) translateY(300px) rotate(-15deg)'},
+          '100%': { transform: 'translate(0px) rotate(-15deg)' },
         },
       
         wiggle3: {
@@ -42,8 +42,8 @@ const config: Config = {
        
         },
         wiggle4: {
-          '0%': { transform: ' translateX(-50px) translateY(-50px) rotate(-15deg) scale(7.5)' },
-          '100%': { transform: 'scale(1) rotate(0) translate(0)' },
+          '0%': { transform: ' translateX(300px) translateY(500px) rotate(-15deg)' },
+          '100%': { transform: 'translate(0px) rotate(-15deg)' },
        
         },
         wiggle5: {
@@ -52,7 +52,7 @@ const config: Config = {
        
         },
         wiggle6: {
-          '0%': { transform: ' translateX(0px) rotate(-15deg)' },
+          '0%': { transform: ' translateX(80px) rotate(-15deg)' },
           '100%': { transform: 'translateX(0px) rotate(-15deg)' },
        
         },
@@ -67,7 +67,7 @@ const config: Config = {
        
         },
         wiggle9: {
-          '0%': { transform: ' translateX(100px) rotate(-15deg)' },
+          '0%': { transform: ' translateX(-100px) rotate(-15deg)' },
           '100%': { transform: 'translateX(0px) rotate(-15deg)' },
        
         },
@@ -75,6 +75,10 @@ const config: Config = {
           '0%': { transform: ' translateX(300px) rotate(-15deg)' },
           '100%': { transform: 'translateX(0px) rotate(-15deg)' },
        
+        },
+        wiggle11:{
+          '0%': { transform: ' translateX(-300px) rotate(-15deg)' },
+          '100%': { transform: 'translateX(0px) rotate(-15deg)' },
         },
         rowanimation:{
           '0%':{    transform: 'translate(0)'},
@@ -92,6 +96,10 @@ const config: Config = {
          '0%': { transform: ' translateY(200px)' },
           '100%': { transform: 'translateY(0px)' },
         },
+        animationChina:{
+          '0%': { transform: ' translateX(-100px) translateY(100px)' },
+          '100%': { transform: 'translateX(-7300px) translateY(20px)' },
+        }
         
     },
       backgroundImage: {
@@ -105,6 +113,10 @@ const config: Config = {
         mynewsletter:'polygon(0 0, 100% 0, 100% calc(100% - 3rem), 0 100%)',
         downloadsection:'polygon(0 0,0 100%,100% calc(100% - 3rem),100% 3rem)',
         blacksection:'polygon(0 calc(100% - 3rem), 0 3rem, 100% 0, 100% 100%)',
+yellowpolygon:"polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%)",
+skybluepolygon:"polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%)",
+darkbluepolygon:"polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%)",
+purplepolygon:"polygon(0 calc(100% - 3rem), 0 3rem, 100% 0, 100% 100%)",
 
     },
     opacity: {

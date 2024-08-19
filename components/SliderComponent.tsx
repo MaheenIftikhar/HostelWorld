@@ -10,29 +10,29 @@ import { FaArrowRight } from "react-icons/fa";
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import Hello from './Hello';
+
 const SliderComponent = () => {
   
   return (
     <>
-    {/* <Hello/> */}
+
     {/* w-[calc(50% + 800px)] */}
- <section className="social-section-wrapper h-[41.25rem] mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex flex-row mt-5">
-        <div className="ml-[8rem] pt-[2rem] w-[29rem] flex flex-col max-w-[50rem] relative">
-          <h1 className="header font-extrabold leading-12 text-7xl tracking-tight">
+ <section className="social-section-wrapper lg:h-[41.25rem] mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex lg:flex-row lg:mt-5 sm:flex-col-reverse sm:gap-10 relative sm:h-[55rem]">
+        <div className="lg:ml-[8rem] sm:ml-[2rem] pt-[2rem] lg:w-[29rem] sm:w-[35rem] flex flex-col sm:max-w-[35rem]">
+          <h1 className="header font-extrabold leading-12 lg:text-6xl sm:text-3xl tracking-tight sm:text-start">
             Go from <span className="text-[#00e0ce]">solo to social </span>, in just a few taps!
           </h1>
-          <p className="text-body mt-4">
+          <p className="text-body mt-4 sm:font-extrabold font-normal">
             Join Linkups to explore and hang out with travellers.
           </p>
         </div>
 
         {/* Carousel Part */}
         {/* w-[calc(100% - 1000px)] */}
-        <div className="h-[37.5rem] w-[39rem] left-[47.25rem] absolute flex justify-center mb-[2rem]">
+        <div className="card carousel lg:h-[37.5rem] lg:w-[39rem] lg:left-[40.25rem] lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center items-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[39rem] sm:mx-10 sm:max-w-[50rem] lg:max-w-[50rem]">
           <Swiper 
           slidesPerView={3}
-            spaceBetween={160}
+            spaceBetween={160}                                                            
             centeredSlides={false}
             autoplay={{
               delay: 8000,
@@ -43,18 +43,19 @@ const SliderComponent = () => {
             }}
             navigation={false}
             modules={[Autoplay,Pagination]}
-            className="mySwiper h-full  w-full "
+            className="mySwiper h-full w-full "
           >
+            {/* 1 */}
             <SwiperSlide>
-              <div className="card-wrapper opacity transition-all .4s linear h-[40rem] w-[14.1875rem] relative rounded-xl mr-[4rem]">
+              <div className="card-wrapper opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem] lg:w-[14.1875rem] relative rounded-xl mr-[4rem]">
                 <video className="pointer rounded-3xl" autoPlay muted loop>
                   <source src="https://a.hwstatic.com/video/upload/q_50/v1644569502/pwa/linkup/linkups-surf.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute top-6 left-0 w-[3rem] p-2">
+                <div className="absolute lg:top-6 sm:top-2 left-0 w-[3rem] p-2">
                   <img  className='rounded-full  border-4 border-yellow-500/100' src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-anna.jpg" alt="Beach Yoga Icon" />
                 </div>
-                <h1 className="text-white absolute top-[16rem] left-2 font-extrabold">Surf Class</h1>
-                <div className="absolute top-[18rem] left-1">
+                <h1 className="text-white absolute lg:top-[16rem] sm:top-[13rem] left-2 font-extrabold">Surf Class</h1>
+                <div className="absolute lg:top-[18rem] sm:top-[15rem] left-1">
                   <div className="flex flex-row gap-2">
                     <div className="flex flex-row font-thin text-xs text-white">
                       <WiTime4 />Today 
@@ -65,20 +66,20 @@ const SliderComponent = () => {
                   </div>
                 </div>
             
-                <button className="bg-violet-800 absolute top-[20rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2' /></button>
+                <button className="bg-violet-800 absolute lg:top-[20rem] sm:top-[16rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2' /></button>
               </div>
              
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper opacity transition-all .4s linear h-[40rem] w-[14.1875rem] relative rounded-xl">
+              <div className="card-wrapper opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem] lg:w-[14.1875rem] relative rounded-xl">
                 <video className="pointer rounded-3xl" autoPlay muted loop>
                   <source src="https://a.hwstatic.com/video/upload/q_50/v1644569502/pwa/linkup/linkups-dunes.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute top-6 left-0 w-[3rem] p-2">
+                <div className="absolute lg:top-6 sm:top-2 left-0 w-[3rem] p-2">
                   <img className='rounded-full  border-4 border-yellow-500/100' src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-f-luiza.jpg" alt="Beach Yoga Icon" />
                 </div>
-                <h1 className="text-white absolute top-[16rem] left-2 font-extrabold">Dune Surfing</h1>
-                <div className="absolute top-[18rem] left-1">
+                <h1 className="text-white absolute lg:top-[16rem] sm:top-[13rem] left-2 font-extrabold">Dune Surfing</h1>
+                <div className="absolute lg:top-[18rem] sm:top-[15rem] left-1">
                   <div className="flex flex-row gap-2">
                     <div className="flex flex-row font-thin text-xs text-white">
                       <WiTime4 />Saturday
@@ -88,20 +89,20 @@ const SliderComponent = () => {
                     </div>
                   </div>
                 </div>
-                <button className="bg-violet-800 absolute top-[20rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2' /></button>
+                <button className="bg-violet-800 absolute lg:top-[20rem] sm:top-[16rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2' /></button>
               </div>
             </SwiperSlide>
            
             <SwiperSlide>
-              <div className="card-wrapper opacity transition-all .4s linear h-[40rem] w-[14.1875rem] relative rounded-xl">
+              <div className="card-wrapper opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem] lg:w-[14.1875rem] relative rounded-xl">
                 <video className="pointer rounded-3xl" autoPlay muted loop>
                   <source src="https://a.hwstatic.com/video/upload/q_50/v1644569502/pwa/linkup/linkups-bike.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute top-6 left-0 w-[3rem] p-2">
+                <div className="absolute lg:top-6 sm:top-2 left-0 w-[3rem] p-2">
                   <img  className='rounded-full  border-4 border-yellow-500/100' src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-jenny.jpg" alt="Beach Yoga Icon" />
                 </div>
-                <h1 className="text-white absolute top-[16rem] left-2 font-extrabold">Bike Tour</h1>
-                <div className="absolute top-[18rem] left-1">
+                <h1 className="text-white absolute lg:top-[16rem] sm:top-[13rem] left-2 font-extrabold">Bike Tour</h1>
+                <div className="absolute lg:top-[18rem] sm:top-[15rem] left-1">
                   <div className="flex flex-row gap-2">
                     <div className="flex flex-row font-thin text-xs text-white">
                       <WiTime4 />Tommorow
@@ -111,17 +112,17 @@ const SliderComponent = () => {
                     </div>
                   </div>
                 </div>
-                <button className="bg-violet-800 absolute top-[20rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2'/></button>
+                <button className="bg-violet-800 absolute lg:top-[20rem] sm:top-[16rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2'/></button>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper-middle-item opacity transition-all .4s linear h-[40rem] w-[14.1875rem] relative rounded-xl">
+              <div className="card-wrapper-middle-item opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem] lg:w-[14.1875rem] relative rounded-xl">
                 <img className='rounded-3xl' src="https://a.hwstatic.com/image/upload/f_auto,h_415,c_scale,q_50/v1644507377/pwa/linkup/beach-yoga.jpg" alt="Beach Yoga" />
-                <div className="absolute top-6 left-0 w-[3rem] p-2">
+                <div className="absolute lg:top-6 sm:top-2 left-0 w-[3rem] p-2">
                   <img className='rounded-full  border-4 border-yellow-500/100' src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-victoria.jpg" alt="Beach Yoga Icon" />
                 </div>
-                <h1 className="text-white absolute top-[16rem] left-2 font-extrabold">Morning Beach Yoga</h1>
-                <div className="absolute top-[18rem] left-1">
+                <h1 className="text-white absolute lg:top-[16rem] sm:top-[13rem] left-2 font-extrabold">Morning Beach Yoga</h1>
+                <div className="absolute lg:top-[18rem] sm:top-[15rem]  left-1">
                   <div className="flex flex-row gap-2">
                     <div className="flex flex-row font-thin text-xs text-white">
                       <WiTime4 />Sunday
@@ -131,17 +132,17 @@ const SliderComponent = () => {
                     </div>
                   </div>
                 </div>
-                <button className="bg-violet-800 absolute top-[20rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2'/></button>
+                <button className="bg-violet-800 absolute lg:top-[20rem] sm:top-[16rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2'/></button>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="card-wrapper-middle-item opacity transition-all .4s linear h-[40rem] w-[14.1875rem] relative rounded-xl">
+              <div className="card-wrapper-middle-item opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem] lg:w-[14.1875rem] relative rounded-xl">
                 <img className='rounded-3xl' src="https://a.hwstatic.com/image/upload/f_auto,h_415,c_scale,q_50/v1644507379/pwa/linkup/Che_Tulum_Hostel_Bar_Tulum_Mexico-md.jpg" alt="Beach Yoga" />
-                <div className="absolute top-6 left-0 w-[3rem] p-2">
+                <div className="absolute lg:top-6 sm:top-2 left-0 w-[3rem] p-2">
                   <img className='rounded-full  border-4 border-yellow-500/100' src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-luka.jpg" alt="Beach Yoga Icon" />
                 </div>
-                <h1 className="text-white absolute top-[16rem] left-2 font-extrabold">Cenote Adventure</h1>
-                <div className="absolute top-[18rem] left-1">
+                <h1 className="text-white absolute lg:top-[16rem] sm:top-[13rem] left-2 font-extrabold">Cenote Adventure</h1>
+                <div className="absolute lg:top-[18rem] sm:top-[15rem] left-1">
                   <div className="flex flex-row gap-2">
                     <div className="flex flex-row font-thin text-xs text-white">
                       <WiTime4/>Friday
@@ -151,7 +152,7 @@ const SliderComponent = () => {
                     </div>
                   </div>
                 </div>
-                <button className="bg-violet-800 absolute top-[20rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2'/></button>
+                <button className="bg-violet-800 absolute lg:top-[20rem] sm:top-[16rem] right-4 text-white w-[3.5rem] p-1 rounded-lg font-extrabold flex flex-row justify-center items-center gap-1">Join<FaArrowRight className='w-2'/></button>
               </div>
             </SwiperSlide>
      

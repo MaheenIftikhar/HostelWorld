@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import MiddleSection from "./MiddleSection";
+import { FaChevronRight } from "react-icons/fa";
 const Travel = () => {
   const list = [
     {
@@ -99,32 +100,39 @@ const Travel = () => {
             ></img>
           </div>
         </div>
+
+        {/* places section */}
+        
         <div className="popular-places-container mt-20 ml-20 h-auto">
           <h2 className="font-extrabold text-black text-3xl">Get inspired!</h2>
           <p className="text-black">
             Discover popular places for unforgettable adventures.
           </p>
-          <div className="mosaic mt-4 flex flex-row gap-[160px] items-center">
-            <div className="mosaic-inner flex flex-col gap-10 relative ">
+          <div className="mosaic mt-4 flex flex-row lg:gap-[120px] items-center sm:overflow-y-auto lg:overflow-hidden sm:pb-6">
+            <div className="mosaic-inner flex lg:flex-col lg:gap-10  relative sm:mr-[1.5rem] sm:flex-[0 0 auto] ">
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/london.jpg"
                 ></img>
-                <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                <span className="bg-black absolute top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   London
                 </span>
                 <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
+                  <FaInstagram/>
                   <span>giannicersosimo</span>
                 </div>
               </Link>
+              </div>
+              {/* 2/2 */}
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/berlin.jpg"
                 ></img>
-                <span className="bg-black absolute top-[370px] left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                <span className="bg-black absolute lg:top-[370px] sm:top-[6px] lg:left-0   text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   Berlin
                 </span>
                 <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
@@ -132,27 +140,33 @@ const Travel = () => {
                   <span>camiladasilvala</span>
                 </div>
               </Link>
+              </div>
             </div>
-            <div className="mosaic-inner flex flex-col gap-10 mt-[120px] relative ">
+
+            {/* 1/2 */}
+            <div className="mosaic-inner flex lg:flex-col lg:gap-10 lg:mt-[120px]  relative sm:mr-[1.5rem] sm:flex-[0 0 auto] ">
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
-                  className="rounded-3xl"
+                  className="rounded-3xl "
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/amsterdam.jpg"
                 ></img>
                 <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   Amsterdam
                 </span>
                 <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
+                  <FaInstagram/>
                   <span>_federicalillo</span>
                 </div>
               </Link>
+              </div>
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/rome.jpg"
                 ></img>
-                <span className="bg-black absolute top-[370px] left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                <span className="bg-black absolute lg:top-[370px] lg:left-0 sm:top-[6px] text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   Rome
                 </span>
                 <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
@@ -160,14 +174,17 @@ const Travel = () => {
                   <span>theyellowrome</span>
                 </div>
               </Link>
+              </div>
             </div>
-            <div className="mosaic-inner  flex flex-col gap-10 relative ">
+            {/* 3 */}
+            <div className="mosaic-inner  flex lg:flex-col lg:gap-10 relative sm:mr-[1.5rem] sm:flex-[0 0 auto] ">
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/barcelona.jpg"
                 ></img>
-                <span className="bg-black absolute top-[370px] left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                <span className="bg-black absolute lg:top-[370px] left-0 sm:top-[10px]  text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   Barcelona
                 </span>
                 <div className="flex flex-row gap-1  text-[#636c7d] items-center justify-end">
@@ -175,12 +192,14 @@ const Travel = () => {
                   <span>noe.gf</span>
                 </div>
               </Link>
+              </div>
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/new_zealand.jpg"
                 ></img>
-                <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                <span className="bg-black absolute  top-0 lg:left-0  text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   New Zealand
                 </span>
                 <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
@@ -188,8 +207,10 @@ const Travel = () => {
                   <span>imlucyirving</span>
                 </div>
               </Link>
+              </div>
             </div>
-            <div className="mosaic-inner  flex flex-col gap-10 mt-[120px] relative ">
+            <div className="mosaic-inner  flex lg:flex-col lg:gap-10 lg:mt-[120px] relative sm:mr-[1.5rem] sm:flex-[0 0 auto]">
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
@@ -203,12 +224,14 @@ const Travel = () => {
                   <span>asyaballery</span>
                 </div>
               </Link>
+              </div>
+              <div className='sm:w-[250px] sm:h-[300px]'>
               <Link href="/">
                 <img
                   className="rounded-3xl"
                   src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/dublin.jpg"
                 ></img>
-                <span className="bg-black absolute top-[370px] left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                <span className="bg-black absolute lg:top-[370px] lg:left-0 sm:top-[4px] text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
                   Dublin
                 </span>
                 <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
@@ -216,6 +239,7 @@ const Travel = () => {
                   <span>4on5away</span>
                 </div>
               </Link>
+            </div>
             </div>
           </div>
         </div>
@@ -255,12 +279,13 @@ const Travel = () => {
             </Card>
           ))}
         </div>
-        <div className=" flex items-end justify-end w-full">
+        <div className=" inline-flex w-full justify-end items-end">
           <Link
-            className="pointer m-auto  rounded-md hover:bg-gray-100 outline-none p-2 mt-3 underline"
+            className="pointer m-auto rounded-md hover:bg-gray-100 outline-none p-[.875rem 1.5rem] mt-3 underline flex items-center flex-row h-[3rem] leading-6 w-fit justify-center"
             href="/"
           >
-            <span className="font-bold">Read our Blog</span>
+            <span className="font-bold">Read our Blog </span>
+            <div className=''><FaChevronRight /></div>
           </Link>
         </div>
       </section>
