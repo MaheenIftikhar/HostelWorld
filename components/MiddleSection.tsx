@@ -23,8 +23,8 @@ const MiddleSection = () => {
                 tours, with local guides, and sociable hostels.
               </p>
             </div>
-            <div className="text-white bg-[#cc0074] rounded-2xl w-[8rem] p-2 mt-2 sm:ml-[6rem] lg:ml-[0] ">
-              <Button className="flex lg:justify-start items-center sm:justify-center font-bold ml-4">
+            <div className=" rounded-2xl w-[8rem] p-2 mt-2 sm:ml-[6rem] lg:ml-[0] ">
+              <Button className="flex text-white lg:justify-start bg-[#cc0074] items-center sm:justify-center font-bold ml-4">
                 Show Me
               </Button>
             </div>

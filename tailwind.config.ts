@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 const {nextui} = require("@nextui-org/react");
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
+    './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -14,16 +14,18 @@ const config: Config = {
         'sm': '300px', 'max': '670px',
         // => @media (min-width: 640px) { ... }
   
-        'md': '670px',
+        'md': '670px', 'md-max':'1000px',
         // => @media (min-width: 768px) { ... }
   
-        'lg': '960px',
+        // 'lg': '670px', 'lg-max':'960px',
+        'lg': '1000px', 'lg-max':'1536px',
+        // 'lg': '900px', 'lg-max':'1200px',
         // => @media (min-width: 1024px) { ... }
   
-        'xl': '1200px',
+        // 'xl': '1200px',
         // => @media (min-width: 1280px) { ... }
   
-        '2xl': '1536px',
+        // '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
       },
       keyframes: {
@@ -124,6 +126,19 @@ purplepolygon:"polygon(0 calc(100% - 3rem), 0 3rem, 100% 0, 100% 100%)",
       'inactive': '0.5',
     },
     },
+  },
+  boxShadow: {
+    'custom-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+  },
+  borderRadius: {
+    'lg': '0.5rem',
+  },
+  maxWidth: {
+    '500': '500px',
+  },
+  colors: {
+    'custom-white': '#ffffff',
+    'custom-orange': '#f25621',
   },
   plugins: [
     require('tailwind-clip-path'),nextui()

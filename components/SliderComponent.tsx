@@ -18,7 +18,7 @@ const SliderComponent = () => {
 
     {/* w-[calc(50% + 800px)] */}
  <section className="social-section-wrapper lg:h-[41.25rem] mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex lg:flex-row lg:mt-5 sm:flex-col-reverse sm:gap-10 relative sm:h-[55rem]">
-        <div className="lg:ml-[8rem] sm:ml-[2rem] pt-[2rem] lg:w-[29rem] sm:w-[35rem] flex flex-col sm:max-w-[35rem]">
+        <div className="lg:ml-[8rem] sm:ml-[2rem] pt-[2rem] lg:w-[29rem] sm:w-[20rem] flex flex-col sm:max-w-[30rem]">
           <h1 className="header font-extrabold leading-12 lg:text-6xl sm:text-3xl tracking-tight sm:text-start">
             Go from <span className="text-[#00e0ce]">solo to social </span>, in just a few taps!
           </h1>
@@ -29,13 +29,13 @@ const SliderComponent = () => {
 
         {/* Carousel Part */}
         {/* w-[calc(100% - 1000px)] */}
-        <div className="card carousel lg:h-[37.5rem] lg:w-[39rem] lg:left-[40.25rem] lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center items-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[39rem] sm:mx-10 sm:max-w-[50rem] lg:max-w-[50rem]">
+        <div className="card carousel lg:h-[37.5rem] lg:w-[39rem] lg:left-[40.25rem] lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center items-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[24rem] sm:mx-10 sm:max-w-[50rem] lg:max-w-[50rem]">
           <Swiper 
           slidesPerView={3}
             spaceBetween={160}                                                            
             centeredSlides={false}
             autoplay={{
-              delay: 8000,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             pagination={{

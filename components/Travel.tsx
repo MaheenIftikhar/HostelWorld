@@ -279,9 +279,9 @@ const Travel = () => {
             </Card>
           ))}
         </div>
-        <div className=" inline-flex w-full justify-end items-end">
+        <div className=" inline-flex  justify-end items-center w-full ">
           <Link
-            className="pointer m-auto rounded-md hover:bg-gray-100 outline-none p-[.875rem 1.5rem] mt-3 underline flex items-center flex-row h-[3rem] leading-6 w-fit justify-center"
+            className="pointer m-auto rounded-md hover:bg-gray-100 mr-2 outline-none p-[.875rem 1.5rem] mt-3 underline flex items-center flex-row h-[3rem] leading-6 w-fit justify-center"
             href="/"
           >
             <span className="font-bold">Read our Blog </span>
