@@ -2,36 +2,26 @@
 import React, { useState } from "react";
 // import logo from '../logo.svg';
 import Link from "next/link";
-import { FaArrowRight, FaRegBuilding } from "react-icons/fa";
-import { LiaCitySolid } from "react-icons/lia";
-
+import {  FaRegBuilding } from "react-icons/fa";
 import { RiUserLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { LuCalendarCheck, LuSendHorizonal } from "react-icons/lu";
-import { CiCirclePlus } from "react-icons/ci";
+import { LuSendHorizonal } from "react-icons/lu";
+import SecondSection from './SecondSection';
 import { FaArrowDown } from "react-icons/fa6";
-import { Button, DateRangePicker, Input } from "@nextui-org/react";
+
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { BiWorld } from "react-icons/bi";
-import { Divider } from "@nextui-org/divider";
-import { CiCircleMinus } from "react-icons/ci";
-import { parseDate, getLocalTimeZone } from "@internationalized/date";
-import { LuUsers2 } from "react-icons/lu";
-import { Autocomplete, AutocompleteItem } from "@nextui-org/react";
-import { places } from "./data";
-
 import { PiMoneyWavy } from "react-icons/pi";
-import { CiSearch } from "react-icons/ci";
-import { IoLocationOutline } from "react-icons/io5";
 import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
+  Divider,
 } from "@nextui-org/react";
-import { useDateFormatter } from "@react-aria/i18n";
+
 import SliderComponent from "./SliderComponent";
 import { TbCurrentLocation } from "react-icons/tb";
 import Travel from "./Travel";
@@ -39,19 +29,7 @@ import Footer from "./Footer";
 import router from "next/router";
 import HelloSection from "./HelloSection";
 const HomePage = () => {
-  const [count, setCount] = useState(1);
-  const [value, setValue] = React.useState(parseDate("2024-04-04"));
-
-  let formatter = useDateFormatter({ dateStyle: "full" });
-  const increment = () => {
-    setCount(count + 1);
-  };
-  // Decrement function
-  const decrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
+ 
   const handleInputClick = () => {
     console.log("Input clicked");
   };
@@ -152,155 +130,11 @@ const HomePage = () => {
       </div>
 
       {/* bg-custom-gradient */}
-      <section className=" flex justify-center items-center z-10 relative lg:w-[96%] sm:w-full max-w-[90rem] lg:ml-8 sm:p-[0.5rem] sm:bg-cover lg:p-[0_2.5rem]">
-        {/* <div className='flex w-[80%]'> */}
-
-        <img
-          className=" her0-img w-full lg:h-auto sm:bg-center lg:mx-[4rem] rounded-3xl"
-          src="https://a.hwstatic.com/image/upload/v1675960377/pwa/bg.desktop.svg"
-        ></img>
-
-        {/* hero search bar  */}
-        <div className="hero-search-container lg:top-[22rem] sm:top-[6rem] md:top-[10rem] lg:left-[1rem] z-[10] flex justify-center items-center absolute flex-col w-full">
-          <div className="hero-search-bar max-w-[64rem] w-[calc(100%-80px)] bg-white border-2 rounded-2xl inline-block relative  p-[0.25rem]  m-[1rem] ">
-            {/* <div className='inline-wrapper hp-search-form-desktop'> */}
-            {/* <div className="inline-form large min-w-[36.875rem]"> */}
-            <div className="destination-container flex flex-row p-2">
-              <Autocomplete
-                startContent={
-                  <IoLocationOutline className="text-black z-20 absolute left-0 top-3 mr-2" />
-                }
-                // endContent={
-                //   <Button
-                //     size="sm"
-                //     className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white flex justify-between items-center cursor font-extrabold sm:block lg:hidden border-none absolute top-[4px] sm:left-[2rem] z-10 rounded-xl"
-                //     onClick={handleButtonClick}
-                //   >
-                //     <FaArrowRight className="text-center" />
-                //   </Button> 
-                // }
-                defaultItems={places}
-                placeholder="Where do you want to go?"
-                className="sm:max-w-full lg:max-w-sm text-white "
-              >
-                {(places) => (
-                  <AutocompleteItem
-                    startContent={<LiaCitySolid className="w-6 h-6" />}
-                    key={places.value}
-                  >
-                    {places.label}
-                  </AutocompleteItem>
-                )}
-              </Autocomplete>
-
-              {/* <div className="flex w-[400px] justify-start items-center gap-2 bg-white p-2 rounded-3xl">
-                          <TbCurrentLocation />
-                          Current Location
-                        </div> */}
-                        </div>
-            {/* sm:left-[20rem] */}
-
-            <Divider orientation="vertical" />
-            <div className="lg:flex flex-row gap-2 absolute left-[26rem] top-[0.8rem] sm:hidden z-[300]">
-              <DateRangePicker
-              color="default"
-                label="Check In & Check Out"
-                visibleMonths={2}
-                className="max-w-xs h-10"
-              />
-              <Divider orientation="vertical"/>
-            </div>
-            {/* dropdown */}
-            <div className="absolute lg:left-[46rem] sm:left-[36rem] lg:top-[0.1rem]  flex justify-center items-center mt-3 text-[#a9afbb] sm:hidden lg:block">
-              <Dropdown>
-                <DropdownTrigger>
-                  <Button
-                    className="flex flex-row justify-between items-center"
-                    variant="bordered"
-                  >
-                    <LuUsers2 className="text-black" /> Guests
-                    <p>{count}</p>
-                  </Button>
-                </DropdownTrigger>
-                <DropdownMenu>
-                  <DropdownItem key="new">
-                    <div className="flex flex-row justify-between items-center">
-                      <LuUsers2 className="text-black" />
-                      Guests{""}
-                      <button
-                        className="w-4 h-4"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          decrement();
-                        }}
-                      >
-                        {" "}
-                        <CiCircleMinus />
-                      </button>{" "}
-                      {count}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          increment();
-                        }}
-                        className="w-4 h-4 "
-                      >
-                        <CiCirclePlus />
-                      </button>
-                    </div>
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </div>
-
-            <Button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor font-extrabold lg:flex sm:hidden items-center border-none absolute top-[0.8rem] left-[55.5rem] z-10 rounded-2xl">
-              <Link href="/"> Let's go! </Link>
-              <FaArrowRight />
-            </Button>
-            <Button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor font-extrabold flex sm:hidden lg:hidden justify-center items-center border-none absolute top-[6px] left-[33rem] z-10 rounded-2xl">
-              <CiSearch />
-            </Button>
-
-            {/* </div> */}
-          </div>
-        </div>
-        {/* </div> */}
-
-        <div className=" flex flex-row lg:gap-[12rem] md:gap-[4rem] absolute lg:left-[10rem] sm:top-4 md:left-[6rem] lg:top-15  sm:left-[4rem] items-center">
-          <div className="text-white flex flex-col gap-2 lg:mt-8 sm:mt-3">
-            <div className="sm:flex sm:flex-col sm:gap-1 sm:justify-center sm:items-center 2 sm:w-[20rem] lg:max-w-full">
-              <h1 className="lg:text-6xl font-extrabold sm:text-3xl">
-                Meet your People.
-              </h1>
-              <p className="text-wrap lg:text-2xl sm:text-md  sm:ml-3 sm:leading-6">
-                <b>Choose where to stay and we'll show you who with!</b>
-              </p>
-            </div>
-            <img
-              className="text-white ml-[14rem] mt-[0.5rem] lg:w-[170px] md:w-[130px] lg:block sm:hidden "
-              src="https://a.hwstatic.com/image/upload/f_auto,q_auto/pwa/arrow.svg"
-            ></img>
-          </div>
-          <div>
-            <img
-              className="lg:flex sm:hidden"
-              src="https://a.hwstatic.com/image/upload/f_auto,q_auto,h_277/pwa/hero.chats.png"
-            ></img>
-          </div>
-        </div>
-      </section>
+      <SecondSection/>
       {/* <section className='flex justify-center items-center bg-black w-[80%] h-[100px]'>
       <div className='text-white text-center'>sjdhfjfjsdnfsdnfn</div>
      </section> */}
-      <div className="flex flex-row justify-center items-center gap-2 mt-12 lg:w-full">
-        <LuCalendarCheck />
-        <h3>
-          <b>
-            Free Cancellation <span className="font-normal">&</span> Flexible
-            Booking <span className="font-normal">available</span>
-          </b>
-        </h3>
-      </div>
+      
 
       <section className="features-carousel-section homepage-section flex justify-center items-center mt-10 w-full sm:scroll-smooth overflow-x-auto max-w-[90rem] lg:ml-10 sm:ml-0">
         <div className="flex flex-row lg:gap-6 sm:gap-3 justify-center items-center">
@@ -523,6 +357,7 @@ const HomePage = () => {
           </p>
         </div>
       </section>
+    
       <HelloSection/>
       <SliderComponent />
       <Travel />

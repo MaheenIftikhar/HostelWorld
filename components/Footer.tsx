@@ -21,8 +21,6 @@ import { DateRangePicker } from "@nextui-org/react";
 const Footer = () => {
   return (
     <>
-
-
       <section className="w-full relative">
         <div
           className="newsletter bg-[#00e0ce] lg:h-[300px] md:h-[500px] absolute top-[0] sm:h-[350px] 
@@ -70,7 +68,7 @@ const Footer = () => {
                 <LuSendHorizonal className="text-black z-20 absolute left-2 top-3 " />
               }
               endContent={
-                <Button  className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor flex justify-center  items-center border-none w-1 h-2 absolute top-[4px] left-[19.5rem] z-10 rounded-xl">
+                <Button  className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor flex justify-center  items-center border-none w-1 h-2 absolute top-[4px] left-[19.5rem] lg:left-[19rem] z-10 rounded-xl">
                   <FaArrowRight />
                 </Button>
               }

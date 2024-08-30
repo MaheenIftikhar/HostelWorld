@@ -23,30 +23,30 @@ const MiddleSection = () => {
                 tours, with local guides, and sociable hostels.
               </p>
             </div>
-            <div className=" rounded-2xl w-[8rem] p-2 mt-2 sm:ml-[6rem] lg:ml-[0] ">
+            <div className=" rounded-2xl w-[8rem] p-2 mt-2 sm:ml-[6rem] lg:ml-[0] md:ml-[18rem]">
               <Button className="flex text-white lg:justify-start bg-[#cc0074] items-center sm:justify-center font-bold ml-4">
                 Show Me
               </Button>
             </div>
           </div>
-          <div className="mosaic items-center flex mb-[2rem] mt-[4rem] max-h-[38.75rem] max-w-[48.75rem] lg:w-[50%] sm:w-[70%] gap-8">
+          <div className="mosaic items-center flex mb-[2rem] mt-[4rem] max-h-[38.75rem] max-w-[48.75rem] lg:w-[50%] sm:w-[70%] gap-8 md:ml-[10rem]">
             <div className="flex flex-col mr-[-1rem] gap-3">
               <img
-                className="max-w-full lg:w-[355px] sm:[172px]"
+                className="max-w-full lg:w-[355px] sm:[172px] md:w-[208px]"
                 src="https://a.hwstatic.com/image/upload/f_auto,h_260,w_355,q_50/v1651737425/pwa/roamies/roamies.d.2.png"
               ></img>
               <img
-                className=" max-w-full lg:w-[170px] ml-[7rem] sm:w-[120px] sm:ml-[0]"
+                className=" max-w-full lg:w-[170px] lg:ml-[5rem] sm:w-[120px] sm:ml-[4rem] "
                 src="https://a.hwstatic.com/image/upload/f_auto,h_170,w_170,q_50/v1651737423/pwa/roamies/roamies.d.3.png"
               ></img>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 ">
               <img
-                className="rounded-xl max-w-full lg:w-[393px] sm:w-[135px]"
+                className="rounded-xl max-w-full lg:w-[393px] sm:w-[135px] "
                 src="https://a.hwstatic.com/image/upload/f_auto,h_302,w_287,q_50/v1651737425/pwa/roamies/roamies.d.1.png"
               ></img>
               <img
-                className=" max-w-full lg:w-[393px] sm:[180px] "
+                className=" max-w-full lg:w-[393px] sm:w-[180px] "
                 src="https://a.hwstatic.com/image/upload/f_auto,h_292,w_393,q_50/v1651737423/pwa/roamies/roamies.d.4.png"
               ></img>
             </div>

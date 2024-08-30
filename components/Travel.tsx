@@ -103,7 +103,7 @@ const Travel = () => {
 
         {/* places section */}
         
-        <div className="popular-places-container mt-20 ml-20 h-auto">
+        <div className="popular-places-container mt-20 lg:ml-20 sm:ml-4 h-auto">
           <h2 className="font-extrabold text-black text-3xl">Get inspired!</h2>
           <p className="text-black">
             Discover popular places for unforgettable adventures.
@@ -245,7 +245,7 @@ const Travel = () => {
         </div>
       </section>
 
-      <section className="popular-places-container mt-4 max-w-[100rem] ml-10 ">
+      <section className="popular-places-container mt-4 max-w-[100rem] lg:ml-10 sm:ml-4 ">
         <div className="">
           <h2 className="font-extrabold text-3xl leading-8">
             Travel tips & adventure advice

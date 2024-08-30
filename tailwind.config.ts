@@ -28,6 +28,9 @@ const config: Config = {
         // '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
       },
+      containerType: {
+        'inline-size': 'inline-size',
+      },
       keyframes: {
         wiggle: {
           '0%': { transform: 'translateX(-50px) translateY(300px) rotate(-15deg)' },
@@ -109,6 +112,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
           'custom-gradient': 'linear-gradient(90deg, #56228bb3 10.67%, #cc0074b3 95.35%)',
+      
+            'hero-pattern': "url('https://a.hwstatic.com/image/upload/v1675960377/pwa/bg.desktop.svg')",
+           
       },
       clipPath: {
         mypolygon: "polygon(0 3rem, 100% 0, 100% 100%, 0 100%)",
@@ -142,6 +148,7 @@ purplepolygon:"polygon(0 calc(100% - 3rem), 0 3rem, 100% 0, 100% 100%)",
   },
   plugins: [
     require('tailwind-clip-path'),nextui()
+    
   ],
 };
 export default config;

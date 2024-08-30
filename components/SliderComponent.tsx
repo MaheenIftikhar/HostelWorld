@@ -17,19 +17,19 @@ const SliderComponent = () => {
     <>
 
     {/* w-[calc(50% + 800px)] */}
- <section className="social-section-wrapper lg:h-[41.25rem] mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex lg:flex-row lg:mt-5 sm:flex-col-reverse sm:gap-10 relative sm:h-[55rem]">
-        <div className="lg:ml-[8rem] sm:ml-[2rem] pt-[2rem] lg:w-[29rem] sm:w-[20rem] flex flex-col sm:max-w-[30rem]">
-          <h1 className="header font-extrabold leading-12 lg:text-6xl sm:text-3xl tracking-tight sm:text-start">
+ <section className="social-section-wrapper lg:h-[41.25rem] md:h-[43.35rem]  mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex lg:flex-row lg:mt-5 sm:flex-col-reverse md:flex-col-reverse md:justify-between sm:gap-10  relative sm:h-[55rem]">
+        <div className="lg:ml-[8rem] sm:ml-[2rem] pt-[2rem] lg:w-[29rem] md:w-[40rem] md:max-w-[50rem] md:mx-[12rem] sm:w-[20rem] flex flex-col sm:max-w-[30rem] mb-4 ">
+          <h1 className="header font-extrabold leading-10 lg:text-6xl sm:text-3xl tracking-tight sm:text-start md:text-5xl ">
             Go from <span className="text-[#00e0ce]">solo to social </span>, in just a few taps!
           </h1>
-          <p className="text-body mt-4 sm:font-extrabold font-normal">
+          <p className="text-body mt-4 sm:font-extrabold md:font-normal lg:font-normal">
             Join Linkups to explore and hang out with travellers.
           </p>
         </div>
 
         {/* Carousel Part */}
         {/* w-[calc(100% - 1000px)] */}
-        <div className="card carousel lg:h-[37.5rem] lg:w-[39rem] lg:left-[40.25rem] lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center items-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[24rem] sm:mx-10 sm:max-w-[50rem] lg:max-w-[50rem]">
+        <div className="card carousel lg:h-[37.5rem]  lg:w-[39rem]  lg:left-[40.25rem] md:h-[28.5rem] md:left-[10.25rem] md:absolute lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[24rem] sm:mx-10 md:mx-10 sm:max-w-[50rem] md:max-w-[50rem] md:w-[30rem] lg:max-w-[50rem]">
           <Swiper 
           slidesPerView={3}
             spaceBetween={160}                                                            
@@ -47,7 +47,7 @@ const SliderComponent = () => {
           >
             {/* 1 */}
             <SwiperSlide>
-              <div className="card-wrapper opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem] lg:w-[14.1875rem] relative rounded-xl mr-[4rem]">
+              <div className="card-wrapper opacity transition-all .4s linear lg:h-[40rem] sm:h-[20rem] sm:w-[11.5rem]  lg:w-[14.1875rem] relative rounded-xl mr-[4rem] ">
                 <video className="pointer rounded-3xl" autoPlay muted loop>
                   <source src="https://a.hwstatic.com/video/upload/q_50/v1644569502/pwa/linkup/linkups-surf.mp4" type="video/mp4" />
                 </video>
