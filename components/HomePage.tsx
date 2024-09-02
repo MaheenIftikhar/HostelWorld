@@ -29,7 +29,10 @@ import Footer from "./Footer";
 import router from "next/router";
 import HelloSection from "./HelloSection";
 const HomePage = () => {
- 
+  const [isOpen, setIsOpen] = useState(false);
+  const[isSecondOptionOpen,setIsSecondOptionOpen]=useState(false);
+  const[isThirdOptionOpen,setIsThirdOptionOpen]=useState(false);
+
   const handleInputClick = () => {
     console.log("Input clicked");
   };
@@ -38,6 +41,10 @@ const HomePage = () => {
     console.log("Button clicked");
     router.push("/");
   };
+  function setIsSecondOpen(arg0: boolean): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <>
       <div className=" header flex justify-between items-center lg:w-[88%] lg:ml-[6.1rem] lg:my-2 sm:p-[1rem] sm:w-full sm:ml ">
@@ -90,28 +97,121 @@ const HomePage = () => {
                     <Link
                       className="flex flex-row justify-between items-center w-full font-extrabold p-2"
                       href="/"
+                      onClick={() => setIsOpen(!isOpen)}
                     >
                       Accomodation
                       <IoIosArrowDown />
                     </Link>
+                    {isOpen && (
+          <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
+            <ul className="py-1">
+              <li>
+                <Link
+                  href="/hostels"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  Hostels
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hotels"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  Hotels
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/bed-and-breakfast"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  Bed and Breakfast
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
                   </DropdownItem>
                   <DropdownItem key="copy">
                     <Link
                       className="flex flex-row gap-2 justify-between items-center font-extrabold w-full p-2"
                       href="/"
+                      onClick={() => setIsSecondOptionOpen(!isSecondOptionOpen)}
                     >
                       Explore HostelWorld
                       <IoIosArrowDown />
                     </Link>
+                    {isOpen && (
+          <div className="absolute left-0 mt-6 w-48 bg-white shadow-lg rounded-md z-10">
+            <ul className="py-1">
+              <li>
+                <Link
+                  href="/hostels"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                 Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hotels"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                 Booking 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/bed-and-breakfast"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  Guarantee
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
                   </DropdownItem>
                   <DropdownItem key="edit">
                     <Link
                       className="flex flex-row gap-2 justify-between items-center font-extrabold w-full p-2"
                       href="/"
+                      onClick={() => setIsThirdOptionOpen(!isThirdOptionOpen)}
                     >
                       Work with Us
                       <IoIosArrowDown />
                     </Link>
+                    {isOpen && (
+          <div className="absolute left-0 mt-8 w-48 bg-white shadow-lg rounded-md z-10">
+            <ul className="py-1">
+              <li>
+                <Link
+                  href="/hostels"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  Hostel SignUp
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hotels"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+              Affiliate Program
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/bed-and-breakfast"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                 Hostel World Inbox
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
                   </DropdownItem>
                   <DropdownItem key="edit">
                     <Link

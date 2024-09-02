@@ -24,11 +24,30 @@ import { FaArrowRight } from "react-icons/fa";
 const SecondSection = () => {
   const [count, setCount] = useState(1);
   const [value, setValue] = React.useState(parseDate("2024-04-04"));
+  const [inputvalue,setInputValue]=useState('');
 
   let formatter = useDateFormatter({ dateStyle: "full" });
   const increment = () => {
     setCount(count + 1);
   };
+  const DestinationDropdown=()=>{
+    <Autocomplete
+    defaultItems={places}
+    placeholder="Where do you want to go?"
+    className="sm:max-w-[21rem] md:w-[30rem] lg:max-w-sm text-black !border-none bg-inherit"
+    style={{ border: "none" }}
+  >
+    {(places) => (
+      <AutocompleteItem
+        startContent={<LiaCitySolid className="w-6 h-6" />}
+        key={places.value}
+      >
+        {places.label}
+      </AutocompleteItem>
+    )}
+  </Autocomplete>
+
+  }
   // Decrement function
   const decrement = () => {
     if (count > 1) {
@@ -82,7 +101,7 @@ const SecondSection = () => {
   }
   const bottomSearchBar = () => {};
   const content = (
-    <PopoverContent>
+    <PopoverContent className=''>
       <div className="px-1 py-2">
         <div className="flex flex-row justify-between">
           <div className='' onClick={destination}>Destination</div>
@@ -130,13 +149,33 @@ const SecondSection = () => {
         </div>
         {/* hero search bar  */}
         {/* first div */}
+
+
+        {/* start */}
         <div className="hero-search-container top-[-2.625rem] z-[280] flex justify-center items-center relative flex-row w-full">
           {/* the second div  */}
           <div className="hero-search-bar max-w-[64rem] lg:w-[calc(100%-80px)] sm:w-[90%] bg-white border-2 rounded-2xl inline-block p-[0.25rem] m-[1rem] ">
             <div className="inline-wrapper hp-search-form-desktop block relative w-full ">
               <div className="inline-form large min-w-[36.875rem] flex-row items-center rounded-xl gap-[0.25rem] p-[0.25rem] w-full flex containerType ">
-                <div className="destination-container flex-1">
-                  <Autocomplete
+   <div className=''>
+   
+   
+   
+                <div className="destination-container min-w-[12rem] rounded-xl w-full">
+<div className='input input-strip flex flex-col relative'>
+  <div className="input-prefix inline-flex left-0 p-[1rem] absolute top-[4px] z-10">
+    <div className='icon-container inline-flex'> <IoLocationOutline/> 
+    </div>
+  </div>
+  <div className="input-wrapper relative">
+  <input type='text'  className='native-input pl-[3rem] pb-[0.5rem] pt-[1.5rem] w-[23rem]' onKeyDown={DestinationDropdown}/>
+  <span className='input-label absolute left-[3rem] top-[1rem] fornt-normal leading-6 overflow-x-hidden  z-10 w-full text-gray-500 transition-all duration-[0.2s]'>Where do you want to go?</span>
+  <Divider className='absolute left-[24rem] top-0' orientation="vertical"/>
+  </div>
+</div>
+
+               
+                  {/* <Autocomplete
                     variant="bordered"
                     startContent={
                       <IoLocationOutline className="text-black z-20 absolute left-0 top-3 mr-2" />
@@ -162,7 +201,7 @@ const SecondSection = () => {
                         {places.label}
                       </AutocompleteItem>
                     )}
-                  </Autocomplete>
+                  </Autocomplete> */}
                 </div>
 
                 {/* <div className="flex w-[400px] justify-start items-center gap-2 bg-white p-2 rounded-3xl">
@@ -172,7 +211,7 @@ const SecondSection = () => {
 
                 {/* sm:left-[20rem] */}
                 <Divider orientation="vertical" />
-                <div className="lg:flex flex-row gap-2 absolute left-[26rem] top-[0.8rem] sm:hidden z-[300] items-center w-[20rem] flex-1">
+                <div className="lg:flex flex-row gap-2 absolute left-[25rem] top-[0.8rem] sm:hidden z-[300] items-center w-[20rem] flex-1">
                   <DateRangePicker
                     color="default"
                     label="Check In & Check Out"
@@ -180,11 +219,11 @@ const SecondSection = () => {
                     visibleMonths={2}
                     className="max-w-xs h-10"
                   />
-                  <Divider orientation="vertical" />
+                  <Divider className='absolute left-[20.5rem] top-0' orientation="vertical" />
                 </div>
 
                 {/* dropdown */}
-                <div className="absolute lg:left-[46rem] sm:left-[36rem] lg:top-[0.1rem]  flex justify-center items-center mt-3 text-[#a9afbb] sm:hidden lg:block flex-1">
+                <div className="guests-submit-wrapper absolute lg:left-[46rem] sm:left-[36rem] lg:top-[0.1rem] flex  flex-row justify-center items-center mt-3 text-[#a9afbb] sm:hidden lg:block ">
                   <Dropdown>
                     <DropdownTrigger>
                       <Button
@@ -225,23 +264,24 @@ const SecondSection = () => {
                     </DropdownMenu>
                   </Dropdown>
                 </div>
-                <div className="flex-1">
+                <div className="">
                   <Button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor font-extrabold lg:flex sm:hidden items-center box-border border-none absolute top-[0.8rem] left-[54rem] z-10 rounded-2xl w-fit">
                     <Link className="text-white" href="/">
                       {" "}
                       Let's go!{" "}
                     </Link>
-                    <FaArrowRight />
+                    <FaArrowRight/>
                   </Button>
                   <button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor font-extrabold md:flex sm:hidden lg:hidden justify-center items-center border-none absolute top-[6px] left-[40rem] z-10 rounded-2xl">
                     <CiSearch />
                   </button>
                 </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
+{/* end */}
         <div className="flex flex-row justify-center items-center gap-2  lg:w-full">
           <LuCalendarCheck />
           <h3>
