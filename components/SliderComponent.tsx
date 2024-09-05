@@ -29,7 +29,8 @@ const SliderComponent = () => {
 
         {/* Carousel Part */}
         {/* w-[calc(100% - 1000px)] */}
-        <div className="card carousel lg:h-[37.5rem]  lg:w-[39rem]  lg:left-[40.25rem] md:h-[28.5rem] md:left-[10.25rem] md:absolute lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[24rem] sm:mx-10 md:mx-10 sm:max-w-[50rem] md:max-w-[50rem] md:w-[30rem] lg:max-w-[50rem]">
+        {/* lg:h-[37.5rem] */}
+        <div className="card carousel lg:h-[30rem] lg:w-[39rem] lg:left-[40.25rem] md:h-[28.5rem] md:left-[10.25rem] md:absolute lg:absolute sm:top-[60px] sm:left-[6rem] flex justify-center mb-[2rem] sm:overflow-x-hidden sm:h-[30rem] sm:w-[24rem] sm:mx-10 md:mx-10 sm:max-w-[50rem] md:max-w-[50rem] md:w-[30rem] lg:max-w-[50rem]">
           <Swiper 
           slidesPerView={3}
             spaceBetween={160}                                                            

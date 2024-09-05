@@ -41,9 +41,7 @@ const HomePage = () => {
     console.log("Button clicked");
     router.push("/");
   };
-  function setIsSecondOpen(arg0: boolean): void {
-    throw new Error("Function not implemented.");
-  }
+
 
   return (
     <>
@@ -58,7 +56,6 @@ const HomePage = () => {
             />
           </Link>
         </div>
-
         <div className="flex justify-between items-center gap-2">
           <FaRegBuilding className="sm:hidden lg:block" />
           <h1 className="sm:hidden lg:block">
@@ -91,11 +88,11 @@ const HomePage = () => {
                         EUR{" "}
                       </button>
                     </div>
-                    <Divider className="my-4" />
+                    <Divider className="my-4"/>
                   </DropdownItem>
                   <DropdownItem key="new">
                     <Link
-                      className="flex flex-row justify-between items-center w-full font-extrabold p-2"
+                      className="flex flex-row justify-between items-center relative w-full font-extrabold p-2"
                       href="/"
                       onClick={() => setIsOpen(!isOpen)}
                     >
@@ -103,7 +100,9 @@ const HomePage = () => {
                       <IoIosArrowDown />
                     </Link>
                     {isOpen && (
-          <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
+          <div className={`absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md z-10 
+            ${isOpen ? 'py-4' : 'py-1'} transition-all duration-300 ease-in-out`}
+            style={{ maxHeight: isOpen ? '200px' : '100px' }}>
             <ul className="py-1">
               <li>
                 <Link
@@ -135,15 +134,17 @@ const HomePage = () => {
                   </DropdownItem>
                   <DropdownItem key="copy">
                     <Link
-                      className="flex flex-row gap-2 justify-between items-center font-extrabold w-full p-2"
+                      className="flex flex-row gap-2 relative justify-between items-center font-extrabold w-full p-2"
                       href="/"
                       onClick={() => setIsSecondOptionOpen(!isSecondOptionOpen)}
                     >
                       Explore HostelWorld
                       <IoIosArrowDown />
                     </Link>
-                    {isOpen && (
-          <div className="absolute left-0 mt-6 w-48 bg-white shadow-lg rounded-md z-10">
+                    {isSecondOptionOpen && (
+          <div className={`absolute left-0 mt-6 w-full bg-white shadow-lg rounded-md z-10 
+            ${isSecondOptionOpen ? 'py-4' : 'py-1'} transition-all duration-300 ease-in-out`}
+            style={{ maxHeight: isSecondOptionOpen ? '200px' : '100px' }}>
             <ul className="py-1">
               <li>
                 <Link
@@ -175,15 +176,17 @@ const HomePage = () => {
                   </DropdownItem>
                   <DropdownItem key="edit">
                     <Link
-                      className="flex flex-row gap-2 justify-between items-center font-extrabold w-full p-2"
+                      className="flex flex-row gap-2 relative justify-between items-center font-extrabold w-full p-2"
                       href="/"
                       onClick={() => setIsThirdOptionOpen(!isThirdOptionOpen)}
                     >
                       Work with Us
                       <IoIosArrowDown />
                     </Link>
-                    {isOpen && (
-          <div className="absolute left-0 mt-8 w-48 bg-white shadow-lg rounded-md z-10">
+                    {isThirdOptionOpen && (
+          <div className={`absolute left-0 mt-6 w-full bg-white shadow-lg rounded-md z-10 
+            ${isSecondOptionOpen ? 'py-4' : 'py-1'} transition-all duration-300 ease-in-out`}
+            style={{ maxHeight: isSecondOptionOpen ? '200px' : '100px' }}>
             <ul className="py-1">
               <li>
                 <Link
