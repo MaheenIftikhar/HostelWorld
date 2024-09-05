@@ -49,6 +49,9 @@ const HelloSection = () => {
             ></img>
           </div>
 
+
+
+{/* steps-wrapper */}
           <div className="sh-steps-wrapper bottom-[3rem] flex flex-col h-[10.9375rem] justify-between left-[15rem] absolute w-[62.1875rem] sm:hidden lg:block before:left-[-2.625rem] before:top-[1.875rem] before:border-l-[3px_dashed_#dddfe4]">
             <div className="flex flex-row gap-2">
               <img
@@ -101,12 +104,12 @@ const HelloSection = () => {
               <div
                 className="step step-active text-[#7f32cd] text-lg font-extrabold pointer tracking-tight leading-8 max-h-[1.75rem] max-w-[17.6875rem] relative 
                 transition-all duration-[0.3s] before:rounded-full before:shadow-[0_0_0_3px_#fff] before:h-[1.3125rem] before:left-[-2.380rem] before:top-[0.500rem] before:absolute before:border-l-[3px_dashed_#dddfe4] before:w-[1.3125rem]
-        before:z-[10] before:bg-[#dddfe4] "
+         before:bg-[#dddfe4]  "
               >
                 Direct Messages
               </div>
             </div>
-            <div className='after:left-[-2.625rem] after:top-[6.3125rem] after:border-l-[3px_dashed_#dddfe4] after:absolute after:h-[3.125rem]  '></div>
+            <div className='after:left-[-2.625rem] after:top-[6.3125rem] after:border-l-[3px_dashed_#dddfe4] after:absolute after:h-[3.125rem] '></div>
           </div>
         </div>
       </div>
