@@ -7,8 +7,9 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LiaCitySolid } from "react-icons/lia";
 import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
 import { Button, DateRangePicker, Input } from "@nextui-org/react";
-import {Tabs, Tab, Card, CardBody, CardHeader} from "@nextui-org/react";
-
+import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
+import { Select, SelectItem } from "@nextui-org/react";
+import { groupTypes } from "./group";
 import {
   Modal,
   ModalContent,
@@ -40,127 +41,134 @@ import { TbCurrentLocation } from "react-icons/tb";
 const SecondSection = () => {
   // useStates
 
-
   const [count, setCount] = useState(1);
   const [value, setValue] = React.useState(parseDate("2024-04-04"));
   const [modalPlacement, setModalPlacement] = useState("bottom");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [inputvalue, setInputValue] = useState("");
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-  const [selected, setSelected] = useState<string>('destinations');
+  const [selected, setSelected] = useState<string>("destinations");
   const [isSmallPopoverOpen, setIsSmallPopoverOpen] = useState(false);
   let formatter = useDateFormatter({ dateStyle: "full" });
- 
+
   const variants: ("underlined" | "solid" | "light" | "bordered")[] = [
-    "underlined", 
+    "underlined",
   ];
-   const bottomSearchBar = () => {
+  const bottomSearchBar = () => {
     setIsPopoverOpen(!isPopoverOpen);
   };
-
+  type Key = string | number;
   let tabs = [
     {
       id: "destinations",
       label: "Destinations",
-      content: 
-             
-      <div className="relative h-30 w-full overflow-hidden">
-             <IoLocationOutline className='absolute z-20 top-4'/>
-                <input
-                    type="text"
-                    className=" absolute native-input top-1 w-full h-10 pl-[3rem] pb-[0.5rem] z-10 pt-[1.5rem]  lg:hidden sm:block "
-                 
-                />
-         
-                    <div className=" mt-2 border-black rounded shadow-lg z-10 h-10">
-                        <div className="px-1 py-2">
-                            <div className="flex w-[350px] justify-start items-center gap-2 p-2 rounded-3xl lg:block sm:hidden">
-                                <TbCurrentLocation />
-                                Current Location
-                            </div>
-                        </div>
-                    </div>
-              
+      content: (
+        <div className="relative h-30 w-full overflow-hidden">
+          <IoLocationOutline className="absolute z-20 top-4" />
+          <input
+            required
+            type="text"
+            className="absolute native-input top-1 w-full h-10 pl-[3rem] pb-[0.5rem] z-10 pt-[1.5rem] lg:hidden sm:block"
+          />
+          <div className="mt-2 border-black rounded shadow-lg z-10 h-10">
+            <div className="px-1 py-2">
+              <div className="flex w-[350px] justify-start items-center gap-2 p-2 rounded-3xl lg:hidden sm:block">
+                <TbCurrentLocation />
+                Current Location
+              </div>
             </div>
+          </div>
+        </div>
+      ),
     },
     {
       id: "dates",
       label: "Dates",
-      content:    
-            <DateRangePicker
-                    color="default"
-                    label="Check In & Check Out"
-                    variant="bordered"
-                    visibleMonths={2}
-                    className="max-w-xs h-10"
-                  />
-                ,
+      content: (
+        <DateRangePicker
+          color="default"
+          label="Check In & Check Out"
+          variant="bordered"
+          visibleMonths={2}
+          className="max-w-xs h-full"
+        />
+      ),
     },
     {
       id: "guests",
       label: "Guests",
-      content:   <Dropdown>
-                      <DropdownTrigger>
-                        <Button
-                          className="flex flex-row justify-between items-center"
-                          variant="bordered"
-                        >
-                          <LuUsers2 className="text-black" /> Guests
-                          <p>{count}</p>
-                        </Button>
-                      </DropdownTrigger>
-                      <DropdownMenu>
-                        <DropdownItem key="new">
-                          <div className="flex flex-row justify-between items-center">
-                            <LuUsers2 className="text-black" />
-                            Guests{""}
-                            <button
-                              className="w-4 h-4"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                decrement();
-                              }}
-                            >
-                              {" "}
-                              <CiCircleMinus />
-                            </button>{" "}
-                            {count}
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                increment();
-                              }}
-                              className="w-4 h-4 "
-                            >
-                              <CiCirclePlus />
-                            </button>
-                          </div>
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>,
-    }
+      content: (
+        <div className="flex flex-col items-center justift-between">
+          <div className="flex flex-row justify-between items-center h-full w-full ">
+            <div className="flex flex-row gap-2 font-normal justify-between items-center">
+              <LuUsers2 className="text-black" />
+              Guests{""}
+            </div>
+            <div className="flex gap-4 flex-row mr-4 justify-between ">
+              <button
+                className=""
+                onClick={(e) => {
+                  e.stopPropagation();
+                  decrement();
+                }}
+              >
+                <CiCircleMinus className="w-10 h-10" />
+              </button>{" "}
+              <div className="flex justify-center items-center ">{count}</div>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  increment();
+                }}
+                className=""
+              >
+                <CiCirclePlus className="w-10 h-10" />
+              </button>
+            </div>
+          </div>
+          
+           {count >8 ?(
+
+            <>
+          
+          <Select label="Group Type" className="max-w-xs mb-3 mt-3">
+            {groupTypes.map((groupTypes) => (
+              <SelectItem key={groupTypes.value}>{groupTypes.label}</SelectItem>
+            ))}
+          </Select>
+          <div className="flex flex-col gap-2">
+            <p>Age Ranges</p>
+            <div className="flex flex-row flex-wrap gap-1">
+              <Button radius="full" variant="ghost">
+                0-12
+              </Button>
+              <Button radius="full" variant="ghost">
+                12-18
+              </Button>
+              <Button radius="full" variant="ghost">
+                18-21
+              </Button>
+              <Button radius="full" variant="ghost">
+                21-35
+              </Button>
+              <Button radius="full" variant="ghost">
+                35-50
+              </Button>
+              <Button radius="full" variant="ghost">
+                50+
+              </Button>
+            </div>
+          </div>
+          </>
+   ): ""}
+  
+        </div>
+      ),
+    },
   ];
 
-  type Key = string | number;
   const increment = () => {
     setCount(count + 1);
-  };
-  const DestinationDropdown = () => {
-    <Autocomplete
-      defaultItems={places}
-      placeholder="Where do you want to go?"
-      className="sm:max-w-[21rem] md:w-[30rem] lg:max-w-sm text-black !border-none bg-inherit"
-      style={{ border: "none" }}
-    >
-      {(places) => (
-        <AutocompleteItem
-          startContent={<LiaCitySolid className="w-6 h-6" />}
-          key={places.value}
-        >
-          {places.label}
-        </AutocompleteItem>
-      )}
-    </Autocomplete>;
   };
 
   const decrement = () => {
@@ -170,9 +178,8 @@ const SecondSection = () => {
   };
 
   const handleSelectionChange = (key: Key) => {
-    setSelected(String(key)); 
+    setSelected(String(key));
   };
- 
 
   const placements = ["bottom"];
 
@@ -226,10 +233,6 @@ const SecondSection = () => {
                       </div>
                     </div>
 
-
-
-
-
                     <div className="input-wrapper relative">
                       {/* for input in large screen */}
 
@@ -240,17 +243,21 @@ const SecondSection = () => {
                         onBlur={() => setIsPopoverOpen(false)}
                       />
                       {isPopoverOpen && (
-                        <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg z-10">
+                        <div className="absolute left-0 mt-4 bg-white border rounded-2xl shadow-lg z-10">
                           <div className="px-1 py-2">
-                            <div className="flex w-[350px] justify-start items-center gap-2 bg-white p-2 rounded-3xl lg:block sm:hidden">
-                              <TbCurrentLocation />
-                              Current Location
+                            <div className="flex w-[350px] h-12 justify-between items-center gap-2 bg-white p-2 rounded-3xl lg:block sm:hidden">
+                              <div className="absolute left-3 top-6">
+                                {" "}
+                                <TbCurrentLocation />
+                              </div>
+                              <span className=" absolute left-12 top-5">
+                                Current Location
+                              </span>
                             </div>
                           </div>
                         </div>
                       )}
 
-                      
                       {/* //small screen */}
                       <input
                         type="text"
@@ -260,58 +267,66 @@ const SecondSection = () => {
                       />
                       {/* start */}
                       <Modal
-                        className="h-[80%] w-full"
+                        className="h-[95%] w-full rounded"
                         isOpen={isOpen}
                         onOpenChange={onOpenChange}
+                        size="full"
+                        radius="lg"
                       >
                         <ModalContent>
                           {(onClose) => (
                             <>
-                            {/* start */}
-                              <ModalHeader className="flex flex-col w-full gap-1">
+                              {/* start */}
+                              <ModalHeader className="flex flex-col w-full gap-1 rounded-3xl">
                                 {" "}
-                                <div className="absolute left-0 z-10 w-[90%] text-[#a9afbb] top-0">
-                                  <div className="px-6   py-4">
-                                  <div className="flex flex-wrap gap-4">
-                                  <div className="flex w-full flex-col">
-                                    
-                                  
-                                  <Tabs aria-label="Dynamic tabs" items={tabs}>
-        {(item) => (
-          <Tab key={item.id} title={item.label}>
-            <Card>
-              <CardBody>
-                {item.content}
-              </CardBody>
-            </Card>  
-          </Tab>
-        )}
-      </Tabs>
-    </div> 
-    </div>
-
+                                <div className="absolute left-0 z-10 w-[100%] text-[#a9afbb] top-5">
+                                  <div className="px-6 py-4">
+                                    <div className="flex flex-wrap gap-4">
+                                      <div className="flex w-full flex-col">
+                                        <Tabs
+                                          fullWidth
+                                          aria-label="Dynamic tabs"
+                                          items={tabs}
+                                          size="lg"
+                                          className="w-full"
+                                        >
+                                          {(item) => (
+                                            <Tab
+                                              key={item.id}
+                                              title={item.label}
+                                            >
+                                              <Card>
+                                                <CardBody>
+                                                  {item.content}
+                                                </CardBody>
+                                              </Card>
+                                            </Tab>
+                                          )}
+                                        </Tabs>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </ModalHeader>
                               {/* onClose */}
 
-                              <ModalBody>
-                                
-                              </ModalBody>
+                              <ModalBody></ModalBody>
                               <ModalFooter></ModalFooter>
                             </>
                           )}
                         </ModalContent>
                       </Modal>
 
-                      {/* <div className="flex w-[350px] justify-start items-center gap-2 bg-white p-2 rounded-3xl lg:block sm:hidden">
-                      <TbCurrentLocation />
-                      Current Location
-                    </div>  */}
-
-                      <span className="input-label absolute left-[3rem] top-[1rem] fornt-normal leading-6 overflow-x-hidden  z-10 w-full text-gray-500 transition-all duration-[0.2s]">
+                      <span
+                        className={`input-label absolute left-[3rem] top-[1rem] leading-6 z-10 w-full text-gray-500 transition-all duration-200 ease-in-out ${
+                          isPopoverOpen
+                            ? "top-[-0.05rem] text-sm text-gray-500"
+                            : ""
+                        }`}
+                      >
                         Where do you want to go?
                       </span>
+
                       <button
                         className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white flex md:hidden justify-center items-center cursor font-extrabold absolute sm:block lg:hidden border-none rounded-xl w-[3rem] h-[2.5rem] top-[0.6rem] left-[19rem]"
                         // onClick={handleButtonClick}
@@ -324,117 +339,6 @@ const SecondSection = () => {
                       />
                     </div>
                   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                   {/* <Autocomplete
                     variant="bordered"

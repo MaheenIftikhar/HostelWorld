@@ -33,6 +33,7 @@ const HelloSection = () => {
             ></img>
           </div>
 
+{/* //different images  */}
           <div className="sh-chat lg:h-[14rem] ml-[19.5rem] mt-[ 2rem] w-[23.4375rem]">
             <img
               className="top-[5.875rem]  absolute rounded-3xl left-[2rem] sm:block lg:hidden sm:w-[300px] md:block md:w-[400px]"
