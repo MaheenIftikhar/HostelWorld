@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 // import logo from '../logo.svg';
 import Link from "next/link";
-import {  FaRegBuilding } from "react-icons/fa";
+import { FaRegBuilding } from "react-icons/fa";
 import { RiUserLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { LuSendHorizonal } from "react-icons/lu";
-import SecondSection from './SecondSection';
+import SecondSection from "./SecondSection";
 import { FaArrowDown } from "react-icons/fa6";
 
 import { CiLocationOn } from "react-icons/ci";
@@ -30,8 +30,8 @@ import router from "next/router";
 import HelloSection from "./HelloSection";
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const[isSecondOptionOpen,setIsSecondOptionOpen]=useState(false);
-  const[isThirdOptionOpen,setIsThirdOptionOpen]=useState(false);
+  const [isSecondOptionOpen, setIsSecondOptionOpen] = useState(false);
+  const [isThirdOptionOpen, setIsThirdOptionOpen] = useState(false);
 
   const handleInputClick = () => {
     console.log("Input clicked");
@@ -41,7 +41,6 @@ const HomePage = () => {
     console.log("Button clicked");
     router.push("/");
   };
-
 
   return (
     <>
@@ -88,7 +87,7 @@ const HomePage = () => {
                         EUR{" "}
                       </button>
                     </div>
-                    <Divider className="my-4"/>
+                    <Divider className="my-4" />
                   </DropdownItem>
                   <DropdownItem key="new">
                     <Link
@@ -100,37 +99,41 @@ const HomePage = () => {
                       <IoIosArrowDown />
                     </Link>
                     {isOpen && (
-          <div className={`absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md z-10 
-            ${isOpen ? 'py-4' : 'py-1'} transition-all duration-300 ease-in-out`}
-            style={{ maxHeight: isOpen ? '200px' : '100px' }}>
-            <ul className="py-1">
-              <li>
-                <Link
-                  href="/hostels"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                  Hostels
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hotels"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                  Hotels
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/bed-and-breakfast"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                  Bed and Breakfast
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
+                      <div
+                        className={`absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md z-10 
+            ${
+              isOpen ? "py-4" : "py-1"
+            } transition-all duration-300 ease-in-out`}
+                        style={{ maxHeight: isOpen ? "200px" : "100px" }}
+                      >
+                        <ul className="py-1">
+                          <li>
+                            <Link
+                              href="/hostels"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Hostels
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/hotels"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Hotels
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/bed-and-breakfast"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Bed and Breakfast
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                   </DropdownItem>
                   <DropdownItem key="copy">
                     <Link
@@ -142,37 +145,43 @@ const HomePage = () => {
                       <IoIosArrowDown />
                     </Link>
                     {isSecondOptionOpen && (
-          <div className={`absolute left-0 mt-6 w-full bg-white shadow-lg rounded-md z-10 
-            ${isSecondOptionOpen ? 'py-4' : 'py-1'} transition-all duration-300 ease-in-out`}
-            style={{ maxHeight: isSecondOptionOpen ? '200px' : '100px' }}>
-            <ul className="py-1">
-              <li>
-                <Link
-                  href="/hostels"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                 Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hotels"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                 Booking 
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/bed-and-breakfast"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                  Guarantee
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
+                      <div
+                        className={`absolute left-0 mt-6 w-full bg-white shadow-lg rounded-md z-10 
+            ${
+              isSecondOptionOpen ? "py-4" : "py-1"
+            } transition-all duration-300 ease-in-out`}
+                        style={{
+                          maxHeight: isSecondOptionOpen ? "200px" : "100px",
+                        }}
+                      >
+                        <ul className="py-1">
+                          <li>
+                            <Link
+                              href="/hostels"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Blog
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/hotels"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Booking
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/bed-and-breakfast"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Guarantee
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                   </DropdownItem>
                   <DropdownItem key="edit">
                     <Link
@@ -184,37 +193,43 @@ const HomePage = () => {
                       <IoIosArrowDown />
                     </Link>
                     {isThirdOptionOpen && (
-          <div className={`absolute left-0 mt-6 w-full bg-white shadow-lg rounded-md z-10 
-            ${isSecondOptionOpen ? 'py-4' : 'py-1'} transition-all duration-300 ease-in-out`}
-            style={{ maxHeight: isSecondOptionOpen ? '200px' : '100px' }}>
-            <ul className="py-1">
-              <li>
-                <Link
-                  href="/hostels"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                  Hostel SignUp
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hotels"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-              Affiliate Program
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/bed-and-breakfast"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                 Hostel World Inbox
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
+                      <div
+                        className={`absolute left-0 mt-6 w-full bg-white shadow-lg rounded-md z-10 
+            ${
+              isSecondOptionOpen ? "py-4" : "py-1"
+            } transition-all duration-300 ease-in-out`}
+                        style={{
+                          maxHeight: isSecondOptionOpen ? "200px" : "100px",
+                        }}
+                      >
+                        <ul className="py-1">
+                          <li>
+                            <Link
+                              href="/hostels"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Hostel SignUp
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/hotels"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Affiliate Program
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/bed-and-breakfast"
+                              className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            >
+                              Hostel World Inbox
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                   </DropdownItem>
                   <DropdownItem key="edit">
                     <Link
@@ -231,15 +246,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <SecondSection />
 
-      {/* bg-custom-gradient */}
-      <SecondSection/>
-      {/* <section className='flex justify-center items-center bg-black w-[80%] h-[100px]'>
-      <div className='text-white text-center'>sjdhfjfjsdnfsdnfn</div>
-     </section> */}
-      
-
-      <section className="features-carousel-section homepage-section flex justify-center items-center mt-10 w-full sm:scroll-smooth overflow-x-auto max-w-[90rem] lg:ml-10 sm:ml-0">
+      <section className="features-carousel-section homepage-section flex lg:justify-center md:justify-center items-center mt-10 w-full sm:scroll-smooth sm:overflow-x-auto lg:overflow-x-hidden max-w-[150rem] lg:ml-10 sm:ml-0">
         <div className="flex flex-row lg:gap-6 sm:gap-3 justify-center items-center">
           <div className="h-[498px] bg-[#f6a90e] rounded-2xl flex flex-col justify-between pt-[1.5rem] lg:min-w-[440px] relative sm:min-w-[13rem] sm:overflow-hidden sm:snap-center sm:w-full sm:min-h-[20.625rem]">
             <div className="clip-path-yellowpolygon flex bg-white absolute left-0 flex-start flex-col p-2">
@@ -248,7 +257,6 @@ const HomePage = () => {
               </h1>
               <p className="text-sm">See who's going!</p>
             </div>
-
             <div className="flex justify-center items-center">
               <img
                 className="max-w-full h-auto absolute bottom-0"
@@ -318,11 +326,12 @@ const HomePage = () => {
       <section className=" animation-container h-[51.3125rem] clip-path-purplepolygon bg-[#7f32cd] [clip-path:polygon(0 calc(100% - 3rem),0_3rem,_100%_0,_100%_100%)] pb-[5rem] relative w-full mt-20 justify-between ">
         <div className="flex justify-center items-center h-[40.625rem] overflow-x-hidden w-full relative">
           <img
-            className="h-auto max-w-[289px] rounded-3xl border shadow-[(0_4px_32px_#0000004d)] left-[calc(50% - 139px)] absolute top-[11.375rem] z-200 transform rotate-[-3deg]"
+            className="h-auto max-w-[289px] rounded-3xl border shadow-[(0_4px_32px_#0000004d)] left-[calc(50% - 139px)] absolute top-[11.375rem] z-[200] transform rotate-[-3deg]"
             src="https://a.hwstatic.com/image/upload/f_auto/v1645010222/pwa/whosgoing/los-patios-card_2x_png.jpg"
           ></img>
           <div className="">
-            <div className="avatar-usa transform translate-x-[125px] translate-y-[-90px] z-102 absolute h-fit w-fit">
+            {/* USA  */}
+            <div className="avatar-usa transform translate-x-[125px] translate-y-[-90px] z-[102] absolute h-fit w-fit lg:animate-[animationUSA_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)] before:border-[#b5eecc] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[72px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/miser-mike.jpg"
@@ -332,58 +341,63 @@ const HomePage = () => {
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/usa_png.png"
               ></img>
             </div>
-            <div className="avatar-poland transform translate-x-[60px] translate-y-[-220px] z-103 absolute h-fit w-fit">
+            {/* Poland  */}
+            <div className="avatar-poland transform translate-x-[60px] translate-y-[-220px] z-[103] absolute h-fit w-fit lg:animate-[animationPoland_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)] before:border-[#a8fff8] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[64px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-anna.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[4px] right-[4px]"
+                className="rounded-full absolute z-[200] h-auto max-w-full bottom-[4px] right-[4px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/poland_png.png"
               ></img>
             </div>
-            <div className="avatar-ireland transform translate-x-[170px] translate-y-[30px] z-106 absolute h-fit w-fit">
+            {/* Ireland  */}
+            <div className="avatar-ireland transform translate-x-[170px] translate-y-[30px] lg:animate-[animateIreland_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)] z-[106] absolute h-fit w-fit before:border-[#91b1f3] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[108px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-eve.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[4px] right-[4px]"
+                className="rounded-full absolute [z-200] h-auto max-w-full bottom-[4px] right-[4px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/ireland_png.png"
               ></img>
             </div>
-            <div className="avatar-brazil transform translate-x-[-220px] translate-y-[-155px] z-106 absolute h-fit w-fit">
+            {/* Brazil*/}
+            <div className="avatar-brazil z-[106]  transform translate-x-[-220px] translate-y-[-155px] absolute h-fit w-fit lg:animate-[animationBrazil_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)]  before:border-[#91b1f3] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[162px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-f-luiza.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[14px] right-[14px]"
+                className="rounded-full absolute z-[200] h-auto max-w-full bottom-[14px] right-[14px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/brazil_png.png"
               ></img>
             </div>
-            <div className="avatar-germany transform translate-x-[-330px] translate-y-[-135px] z-104 absolute h-fit w-fit">
+            {/* Germany  */}
+            <div className="avatar-germany transform translate-x-[-330px] translate-y-[-135px] z-[104] absolute h-fit w-fit lg:animate-[animationGermany_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)]  before:border-[#ba90e4] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[120px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-jenny.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[8px] right-[8px]"
+                className="rounded-full absolute z-[200] h-auto max-w-full bottom-[8px] right-[8px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/germany_png.png"
               ></img>
             </div>
             {/* new */}
-            <div className="avatar-portugal transform translate-x-[-330px] translate-y-[-135px] z-102 absolute h-fit w-fit">
+            <div className="avatar-portugal transform translate-x-[-330px] translate-y-[-135px] [z-102] absolute h-fit w-fit lg:animate-[animationPortugal_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)]  before:border-[#f5ebb7] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[72px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-laura.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[0px] right-[0px]"
+                className="rounded-full absolute [z-200] h-auto max-w-full bottom-[0px] right-[0px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/portugal_png.png"
               ></img>
             </div>
-            <div className="avatar-italy transform translate-x-[240px] translate-y-[-200px] z-103 absolute h-fit w-fit">
+            {/* Italy  */}
+            <div className="avatar-italy transform translate-x-[240px] translate-y-[-200px] z-[103] absolute h-fit w-fit lg:animate-[animateItaly_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)]  before:border-[#f6a90e] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[80px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-luka.jpg"
@@ -394,17 +408,18 @@ const HomePage = () => {
               ></img>
             </div>
             {/* animate-[animationChina_2s_forwards_cubic-bezier(.6,-.28,.69,1.58)] */}
-            <div className="avatar-china  transform translate-x-[-210px] translate-y-[70px] z-105 absolute h-fit w-fit ">
+            <div className="avatar-china  transform translate-x-[-210px] translate-y-[70px] z-[105] absolute h-fit w-fit  lg:animate-[animationChina_2s_forwards_cubic-bezier(0.6,-0.28,0.69,1.58)] before:border-[#f6a90e] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[156px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-pan.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[18px] right-[18px]"
+                className="rounded-full absolute z-[200] h-auto max-w-full bottom-[18px] right-[18px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/china_png.png"
               ></img>
             </div>
-            <div className="avatar-france transform translate-x-[-300px] translate-y-[50px] z-101 absolute h-fit w-fit">
+            {/* France  */}
+            <div className="avatar-france transform translate-x-[-300px] translate-y-[50px] z-[101] absolute h-fit w-fit lg:animate-[animationFrance_2s_forwards_cubic-bezier(0.6,-0.28,0.69,1.58)] before:border-[#ffaddc] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)] ">
               <img
                 className=" border-2 border-[fff] rounded-full w-[80px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-pierre.jpg"
@@ -414,24 +429,25 @@ const HomePage = () => {
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/france_png.png"
               ></img>
             </div>
-            <div className="avatar-korea transform translate-x-[370px] translate-y-[-150px] z-105 absolute h-fit w-fit">
+            {/* korea  */}
+            <div className="avatar-korea transform translate-x-[370px] translate-y-[-150px] z-[105] absolute h-fit w-fit lg:animate-[animationkorea_2s_forwards_cubic-bezier(0.6,-0.28,0.69,1.58)] before:border-[#ffaddc] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)] ">
               <img
                 className=" border-2 border-[fff] rounded-full w-[128px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-tom.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[8px] right-[8px]"
+                className="rounded-full absolute z-p[200] h-auto max-w-full bottom-[8px] right-[8px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/south-korea_png.png"
               ></img>
             </div>
-
-            <div className="avatar-spain transform translate-x-[120px] translate-y-[160px] z-104 absolute h-fit w-fit">
+{/* Spain  */}
+            <div className="avatar-spain transform translate-x-[120px] translate-y-[160px] z-[104] absolute h-fit w-fit lg:animate-[animationSpain_2s_forwards_cubic-bezier(0.6,-0.28,0.69,1.58)]  before:border-[#a8fff8] before:border-solid before:border-[.125rem] before:rounded-full before:content-[''] before:h-[calc(100%+5px)] before:left-[-.15625rem] before:absolute before:top-[-.1625rem] before:w-[calc(100%+5px)]">
               <img
                 className=" border-2 border-[fff] rounded-full w-[96px] object-cover relative"
                 src="https://a.hwstatic.com/image/upload/f_auto,q_75,h_166/v1644506092/pwa/whosgoing/user-victoria.jpg"
               ></img>
               <img
-                className="rounded-full absolute z-200 h-auto max-w-full bottom-[0px] right-[0px]"
+                className="rounded-full absolute z-[200] h-auto max-w-full bottom-[0px] right-[0px]"
                 src="https://a.hwstatic.com/image/upload/q_auto,f_auto,h_24/v1644506092/pwa/whosgoing/spain_png.png"
               ></img>
             </div>
@@ -460,8 +476,8 @@ const HomePage = () => {
           </p>
         </div>
       </section>
-    
-      <HelloSection/>
+
+      <HelloSection />
       <SliderComponent />
       <Travel />
       <Footer />

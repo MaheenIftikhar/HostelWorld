@@ -55,10 +55,10 @@ const MiddleSection = () => {
       </section>
 
       {/* animated section */}
-      <section className="hc-section-wrapper lg:h-[80rem] sm:h-[60rem] pb-[2rem] overflow-hidden relative w-full mb-8">
+      <section className="hc-section-wrapper lg:h-[80rem] sm:h-[60rem] pb-[2rem] overflow-hidden relative w-full mb-8 p-[4rem_0_0_0]">
         {/* mobile section */}
         <div className="cards-mobile-container lg:hidden sm:block">
-          <div className="row first-row animate-[rowanimation_10s_linear_infinite] flex flex-row flex-nowrap w-fit ml-[1.75rem] gap-[1.75rem] mb-16 ">
+          <div className="row first-row animate-[rowanimation_10s_linear_infinite] flex flex-row flex-nowrap w-fit ml-[1.75rem] gap-[1.75rem] mb-16">
             {/* //1 */}
 
             <div
@@ -166,8 +166,7 @@ const MiddleSection = () => {
               </div>
             </div>
           </div>
-{/* mobilesection2 */}
-
+          {/* mobilesection2 */}
 
           <div className="row second-row sm:animate-[secondrowanimation_8s_linear_infinite] sm:mt-2 sm:flex sm:gap-[1.75rem] sm:flex-nowrap sm:w-fit">
             {/* 1 */}
@@ -274,36 +273,38 @@ const MiddleSection = () => {
         </div>
 
         {/* /desktop/ */}
-        <div
-          className="card-wrapper-desktop lg:left-[350px] lg:top-[140px] lg:transform lg:translate-x-[-40px] lg:translate-y-[100px] lg:-rotate-15 lg:bg-[#fff]
-    lg:rounded-3xl
-    lg:shadow-[0_4px_32px_#0000001a]
-    lg:pointer lg:absolute
+        {/* 1 Casa Gracia  */}
+        <div className="cards-desktop-container animate lg:flex sm:hidden">
+          <div
+            className="card-wrapper-desktop left-[350px] top-[140px] transform translate-x-[-50px] translate-y-[300px] -rotate-15 bg-[#fff]
+    rounded-3xl
+    shadow-[0_4px_32px_#0000001a]
+    pointer absolute
     flex
-    lg:flex-col
-    lg:h-fit
-    lg:p-[.375rem] lg:w-[14.5rem] lg:animate-[wiggle_1.6s_ease-out_.4s_forwards] sm:hidden lg:block "
-        >
-          <video
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer "
-            autoPlay
-            muted
-            loop
-            id="myVideo"
+    flex-col
+    h-fit
+    p-[.375rem] w-[14.5rem] animate-[wiggle_1.6s_ease-out_.4s_forwards]  "
           >
-            <source
-              src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099928/pwa/hostelcards/CasaGraciaBarcelona.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Casa Gracia</span>
-            <span className="text-xs text-[#636c7d]">Barcelona, Spain</span>
+            <video
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer "
+              autoPlay
+              muted
+              loop
+              id="myVideo"
+            >
+              <source
+                src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099928/pwa/hostelcards/CasaGraciaBarcelona.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Casa Gracia</span>
+              <span className="text-xs text-[#636c7d]">Barcelona, Spain</span>
+            </div>
           </div>
-        </div>
-
-        <div
-          className="card-wrapper lg:block sm:hidden left-[760px] top-[160px] transform translate-x-[-150px] translate-y-[300px] rotate-[-15deg]  bg-[#fff]
+{/* Salty jackal  */}
+          <div
+            className="card-wrapper lg:block sm:hidden left-[760px] top-[160px] transform translate-x-[-150px] translate-y-[300px] rotate-[-15deg]  bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -311,66 +312,70 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle2_1.6s_ease-out_.4s_forwards]"
-        >
-          <img
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
-            src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099930/pwa/hostelcards/SaltyJackal.jpg"
-          ></img>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Salty Jackal</span>
-            <span className="text-xs text-[#636c7d]">Swakopmund, Namibia</span>
+          >
+            <img
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
+              src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099930/pwa/hostelcards/SaltyJackal.jpg"
+            ></img>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Salty Jackal</span>
+              <span className="text-xs text-[#636c7d]">
+                Swakopmund, Namibia
+              </span>
+            </div>
           </div>
-        </div>
-
-        <div
-          className="card-wrapper lg:block sm:hidden left-[1200px] top-[180px] transform translate-y-[100px] rotate-[-15deg] bg-[#fff]
+{/* Casa Angel  */}
+<div
+  className="card-wrapper lg:block sm:hidden left-[1200px] top-[180px] transform translate-y-[300px] rotate-[-15deg] bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
-    pointer absolute
+    cursor-pointer
+    absolute
     flex
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle3_1.6s_ease-out_.4s_forwards]"
-        >
-          <img
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
-            src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099928/pwa/hostelcards/CasaAngelHostel.jpg"
-          ></img>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Casa Angel Hostel</span>
-            <span className="text-xs text-[#636c7d]">Oaxaca, Mexico</span>
+>
+            <img
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
+              src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099928/pwa/hostelcards/CasaAngelHostel.jpg"
+            ></img>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Casa Angel Hostel</span>
+              <span className="text-xs text-[#636c7d]">Oaxaca, Mexico</span>
+            </div>
           </div>
-        </div>
 
-        <div
-          className="card-wrapper lg:block sm:hidden left-[960px] top-[480px] transform translate-x-[300px] translate-y-[500px] rotate-[-15deg] z-[110]    bg-[#fff]
+          <div
+            className="card-wrapper lg:block sm:hidden left-[960px] top-[480px] transform translate-x-[300px] translate-y-[500px] rotate-[-15deg]  bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
     flex
     flex-col
     h-fit
+    z-[110]
     p-[.375rem] w-[14.5rem] animate-[wiggle4_1.6s_ease-out_.4s_forwards]"
-        >
-          <video
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
-            autoPlay
-            muted
-            loop
-            id="myVideo"
           >
-            <source
-              src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099930/pwa/hostelcards/ViajeroTayronaHostel.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Viajero Tayrona</span>
-            <span className="text-xs text-[#636c7d]">Buritaca, Colombia</span>
+            <video
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer-events-none transform scale-[7.5] rotate-[15deg] -translate-x-[50px] -translate-y-[50px] animate-[hostelCard_1.6s_ease-out_0.4s_forwards]"
+              autoPlay
+              muted
+              loop
+              id="myVideo"
+            >
+              <source
+                src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099930/pwa/hostelcards/ViajeroTayronaHostel.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Viajero Tayrona</span>
+              <span className="text-xs text-[#636c7d]">Buritaca, Colombia</span>
+            </div>
           </div>
-        </div>
-        <div
-          className="card-wrapper lg:block sm:hidden left-[1300px] top-[500px] transform translate-y-[150px] rotate-[-15deg]  bg-[#fff]
+          <div
+            className="card-wrapper lg:block sm:hidden left-[1300px] top-[500px] transform translate-y-[150px] rotate-[-15deg]  bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -378,18 +383,18 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle5_1.6s_ease-out_.4s_forwards]"
-        >
-          <img
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
-            src="https://a.hwstatic.com/image/upload/q_50,h_245/v1645099928/pwa/hostelcards/Generator.jpg"
-          ></img>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Generator</span>
-            <span className="text-xs text-[#636c7d]">Barcelona, Spain</span>
+          >
+            <img
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
+              src="https://a.hwstatic.com/image/upload/q_50,h_245/v1645099928/pwa/hostelcards/Generator.jpg"
+            ></img>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Generator</span>
+              <span className="text-xs text-[#636c7d]">Barcelona, Spain</span>
+            </div>
           </div>
-        </div>
-        <div
-          className="card-wrapper  lg:block sm:hidden left-[340px] top-[910px] transform translate-x-[200px] translate-y-[70px] rotate-[-15deg]   bg-[#fff]
+          <div
+            className="card-wrapper  lg:block sm:hidden left-[340px] top-[910px] transform translate-x-[200px] translate-y-[70px] rotate-[-15deg]   bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -397,21 +402,19 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle7_1.6s_ease-out_.4s_forwards]"
-        >
-          <img
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
-            src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099928/pwa/hostelcards/BaseSydney.jpg"
-          ></img>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Base Sydney</span>
-            <span className="text-xs text-[#636c7d]">Sydney, Australia</span>
+          >
+            <img
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
+              src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099928/pwa/hostelcards/BaseSydney.jpg"
+            ></img>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Base Sydney</span>
+              <span className="text-xs text-[#636c7d]">Sydney, Australia</span>
+            </div>
           </div>
-        </div>
 
-
-
-        <div
-          className="card-wrapper lg:block sm:hidden left-[600px] top-[830px] transform translate-x-[100px] rotate-[-15deg] z-[110]    bg-[#fff]
+          <div
+            className="card-wrapper lg:block sm:hidden left-[600px] top-[830px] transform translate-x-[100px] rotate-[-15deg] z-[110]    bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -419,27 +422,27 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle8_1.6s_ease-out_.4s_forwards]"
-        >
-          <video
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
-            autoPlay
-            muted
-            loop
-            id="myVideo"
           >
-            <source
-              src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099930/pwa/hostelcards/QueenHostelMilan.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Queen Hostel Milan</span>
-            <span className="text-xs text-[#636c7d]">Milan, Italy</span>
+            <video
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
+              autoPlay
+              muted
+              loop
+              id="myVideo"
+            >
+              <source
+                src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099930/pwa/hostelcards/QueenHostelMilan.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Queen Hostel Milan</span>
+              <span className="text-xs text-[#636c7d]">Milan, Italy</span>
+            </div>
           </div>
-        </div>
 
-        <div
-          className="card-wrapper sm:hidden lg:block left-[920px] top-[890px] transform translate-x-[-100px] rotate-[-15deg] bg-[#fff]
+          <div
+            className="card-wrapper sm:hidden lg:block left-[920px] top-[890px] transform translate-x-[-100px] rotate-[-15deg] bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -447,23 +450,21 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle9_1.6s_ease-out_.4s_forwards]"
-        >
-          <img
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
-            src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099929/pwa/hostelcards/CanaleHostel.jpg"
-          ></img>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Canale Hostel</span>
-            <span className="text-xs text-[#636c7d]">Bangkok, Thailand</span>
+          >
+            <img
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer w-[276px] max-w-full"
+              src="https://a.hwstatic.com/image/upload/f_auto,q_50,h_245/v1645099929/pwa/hostelcards/CanaleHostel.jpg"
+            ></img>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Canale Hostel</span>
+              <span className="text-xs text-[#636c7d]">Bangkok, Thailand</span>
+            </div>
           </div>
-        </div>
 
-        {/* video */}
+          {/* video */}
 
-
-
-        <div
-          className="card-wrapper sm:hidden  lg:block left-[40px] top-[830px] transform translate-x-[80px] rotate-[-15deg] z-[110]  bg-[#fff]
+          <div
+            className="card-wrapper sm:hidden  lg:block left-[40px] top-[830px] transform translate-x-[80px] rotate-[-15deg] z-[110]  bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -471,30 +472,27 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle6_1.6s_ease-out_.4s_forwards]"
-        >
-          <video
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
-            autoPlay
-            muted
-            loop
-            id="myVideo"
           >
-            <source
-              src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099930/pwa/hostelcards/SelinaCancun.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Selina Cancun</span>
-            <span className="text-xs text-[#636c7d]">Cancun, Mexico</span>
+            <video
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
+              autoPlay
+              muted
+              loop
+              id="myVideo"
+            >
+              <source
+                src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099930/pwa/hostelcards/SelinaCancun.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Selina Cancun</span>
+              <span className="text-xs text-[#636c7d]">Cancun, Mexico</span>
+            </div>
           </div>
-        </div>
 
-
-
-
-        <div
-          className="card-wrapper sm:hidden  lg:block left-[1240px] top-[950px] transform translate-x-[-300px] rotate-[-15deg] z-[110]  bg-[#fff]
+          <div
+            className="card-wrapper sm:hidden  lg:block left-[1240px] top-[950px] transform translate-x-[-300px] rotate-[-15deg] z-[110]  bg-[#fff]
     rounded-3xl
     shadow-[0_4px_32px_#0000001a]
     pointer absolute
@@ -502,25 +500,27 @@ const MiddleSection = () => {
     flex-col
     h-fit
     p-[.375rem] w-[14.5rem] animate-[wiggle11_1.6s_ease-out_.4s_forwards]"
-        >
-          <video
-            className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
-            autoPlay
-            muted
-            loop
-            id="myVideo"
           >
-            <source
-              src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099928/pwa/hostelcards/LubDKohSamui.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="flex flex-col justify-center item-center ml-2 mt-2">
-            <span className="font-bold text-lg">Lub D Koh Samui</span>
-            <span className="text-xs text-[#636c7d]">Koh Samui, Thailand</span>
+            <video
+              className="h-[12rem] rounded-3xl mb-[0.75rem] object-cover pointer"
+              autoPlay
+              muted
+              loop
+              id="myVideo"
+            >
+              <source
+                src="https://a.hwstatic.com/video/upload/q_50,h_245/v1645099928/pwa/hostelcards/LubDKohSamui.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="flex flex-col justify-center item-center ml-2 mt-2">
+              <span className="font-bold text-lg">Lub D Koh Samui</span>
+              <span className="text-xs text-[#636c7d]">
+                Koh Samui, Thailand
+              </span>
+            </div>
           </div>
         </div>
-
         {/* // */}
         <div className="text-animate lg:animate-[animate_1.6s_ease-out_.4s_forwards]  absolute lg:left-[8rem] lg:top-[35rem] sm:top-[45rem] sm:left-[6rem] lg:max-w-[42rem] lg:mt-[4rem]">
           <h2 className="font-extrabold lg:text-4xl mb-[1rem] leading-10 tracking-tight sm:text-5xl sm:text-balance">

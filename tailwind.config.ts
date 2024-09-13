@@ -11,10 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        'sm': '300px', 'max': '670px',
-        // => @media (min-width: 640px) { ... }
+        'sm': '300px', 'max': '690px',
+        // => @media (min-width: 640px) { ... } 
   
-        'md': '670px', 'md-max':'1000px',
+        'md': '695px', 'md-max':'900px',
         // => @media (min-width: 768px) { ... }
   
         // 'lg': '670px', 'lg-max':'960px',
@@ -85,6 +85,7 @@ const config: Config = {
           '0%': { transform: ' translateX(-300px) rotate(-15deg)' },
           '100%': { transform: 'translateX(0px) rotate(-15deg)' },
         },
+        
         rowanimation:{
           '0%':{    transform: 'translate(0)'},
           '100%':{transform: 'translate(-848px)'},
@@ -103,10 +104,57 @@ const config: Config = {
         },
         animationChina:{
           '0%': { transform: ' translateX(-100px) translateY(100px)' },
-          '100%': { transform: 'translateX(-7300px) translateY(20px)' },
+          '100%': { transform: 'translateX(-730px) translateY(20px)' },
+        },
+        animateIreland:{
+          '0%': { transform: ' translateX(140px) translateY(30px)' },
+          '100%': { transform: 'translateX(400px) translateY(30px)' },
         }
-        
+        ,
+        animationkorea:{
+          '0%': { transform: ' translate(120px)' },
+          '100%': { transform: 'translateX(500px) translateY(-180px)' },
+        },
+        animationBrazil:{
+          '0%': { transform: ' translate(-100px)' },
+          '100%': { transform: 'translateX(-540px) translateY(-180px)' },
+        },
+       
+        animationSpain:{
+          '0%': { transform: ' translateX(120px) translateY(90px)' },
+          '100%': { transform: 'translateX(230px) translateY(100px)' },
+        },
+        animationUSA:{
+          '0%': { transform: ' translateX(125px) translateY(-20px)' },
+          '100%': { transform: 'translateX(145px) translateY(-20px)' },
+        },
+        animationItaly:{
+          '0%': { transform: ' translateX(110px) translateY(-110px)' },
+          '100%': { transform: 'translateX(130px) translateY(-190px)' },
+        },
+        animationPoland:{
+          '0%': { transform: ' translateX(-170px) translateY(-60px)' },
+          '100%': { transform: 'translateX(-200px) translateY(-70px)' },
+        },
+        animationPortugal:{
+          '0%': { transform: ' translateX(-140px) translateY(-80px)' },
+          '100%': { transform: 'translateX(-260px) translateY(-195px)' },
+        },
+        animationFrance:{
+          '0%': { transform: ' translateX(-40px) translateY(60px)' },
+          '100%': { transform: 'translateX(-270px) translateY(6px)' },
+        },
+        animationGermany:{
+          '0%': { transform: ' translateX(-100px) translateY(160px)' },
+          '100%': { transform: 'translateX(-460px) translateY(150px)' },
+        },
+        hostelCard:{
+          '0%': { transform: 'scale(7.5) rotate(15deg) translateX(-50px) translateY(-50px)' },
+          '100%': { transform: 'scale(1) rotate(0) translate(0)' },
+        }
+
     },
+    
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

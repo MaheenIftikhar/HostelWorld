@@ -6,8 +6,25 @@ body {
     box-sizing: border-box;
     padding: 0;
     width:100% !important;
-    overflow-x: hidden;
+  
 
 }
+body, html{
+  width: 100vw;
+  height:100vh;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 1000px) and (max-width: 1165px) 
+ {
+    guestscontainer{
+     width:150px;
+    }
+  }
  
+.modal-round{
+  border-radius: 20px 20px 0px 0px !important;
+}
+.placeholder-center::placeholder {
+  text-align: center;
 
+}

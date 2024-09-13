@@ -27,8 +27,7 @@ const Footer = () => {
     clip-path-mynewsletter w-full
     m-b[-3rem]"
         >
-
-          <div className="flex lg:flex-row justify-between items-center md:flex-col sm:flex-col lg:gap-16 md:gap-2 sm:gap-6 lg:p-10 sm:p-6  lg:ml-[8rem] md:ml-2 sm:ml-2 md:w-[] lg:w-[70rem]">
+          <div className="flex lg:flex-row justify-between items-center md:flex-col sm:flex-col lg:gap-16 md:gap-2 sm:gap-2 lg:p-10 sm:p-6  lg:ml-[8rem] md:ml-2 sm:ml-2 md:w-[] lg:w-[70rem]">
             <Image
               className="sm:hidden lg:block md:block"
               src={letter}
@@ -47,44 +46,26 @@ const Footer = () => {
               </p>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <Input className="w-[400px] rounded-xl z-10 relative text-black/90 dark:text-white/90 bg-white"
+            <Input
+              className="lg:w-[400px] md:w-[400px] sm:w-[300px] rounded-xl z-10 relative text-black/90 dark:text-white/90 bg-white"
               startContent={
                 <LuSendHorizonal className="text-black z-20 absolute left-2 top-3 " />
               }
               endContent={
-                <Button  className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor flex justify-center  items-center border-none w-1 h-2 absolute top-[4px] left-[19.5rem] lg:left-[19rem] z-10 rounded-xl">
-                  <FaArrowRight />
-                </Button>
+                <button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor flex justify-center items-center border-none w-10 h-8 absolute top-[4px] sm:left-[16rem] lg:left-[21rem] z-10 rounded-xl">
+                  <FaArrowRight className="w-10 h-10" />
+                </button>
               }
               classNames={{
-                input: [
-                 
-                  "p-4",
-                ],
+                input: ["p-4"],
 
                 inputWrapper: ["!cursor-text", ""],
               }}
               placeholder="&nbsp;&nbsp;&nbsp; Your email address..."
             />
           </div>
-          <div className='flex justify-center w-[50rem] items-center text-center lg:ml-[24rem] md:ml-[5rem] '>
-          <p className="text-[#007a70] sm:text-sm sm:leading-6 md:text-sm md:leading-4">
+          <div className="flex justify-center lg:w-[50rem] md:w-[40rem]  items-center text-center lg:ml-[14rem] md:ml-[5rem] sm:m-[0_1rem_1rem_1rem]">
+            <p className="text-[#007a70] sm:text-xs sm:leading-4 md:text-sm md:leading-4">
               Just so you know, we’ll be able to see if you receive and open our
               emails to help us monitor the success of our marketing campaigns.
               You’ll find further details in our{" "}
@@ -94,33 +75,8 @@ const Footer = () => {
                 </Link>
               </span>
             </p>
-            </div>
-          
           </div>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         <section className=" clip-path-mypolygon w-full bg-[#121417] text-[#fff] font-normal font-md tracking-tight absolute top-[250px] leading-6 min-h-[680px] h-full">
           <div className="w-[80%] mt-10 ml-10 absolute top-[30px] ">

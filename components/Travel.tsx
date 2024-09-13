@@ -42,7 +42,7 @@ const Travel = () => {
   ];
   return (
     <>
-     <MiddleSection/>
+      <MiddleSection />
       <section className="w-full download-section flex flex-col items-center bg-[#2767e7] pb-[6rem] pt-[5rem] clip-path-downloadsection">
         <div className="flex flex-col gap-4 item-center justify-center">
           <div className="flex item-center justify-center">
@@ -102,7 +102,7 @@ const Travel = () => {
         </div>
 
         {/* places section */}
-        
+
         <div className="popular-places-container mt-20 lg:ml-20 sm:ml-4 h-auto">
           <h2 className="font-extrabold text-black text-3xl">Get inspired!</h2>
           <p className="text-black">
@@ -110,136 +110,136 @@ const Travel = () => {
           </p>
           <div className="mosaic mt-4 flex flex-row lg:gap-[120px] items-center sm:overflow-y-auto lg:overflow-hidden sm:pb-6">
             <div className="mosaic-inner flex lg:flex-col lg:gap-10  relative sm:mr-[1.5rem] sm:flex-[0 0 auto] ">
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/london.jpg"
-                ></img>
-                <span className="bg-black absolute top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  London
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram/>
-                  <span>giannicersosimo</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/london.jpg"
+                  ></img>
+                  <span className="bg-black absolute top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    London
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>giannicersosimo</span>
+                  </div>
+                </Link>
               </div>
               {/* 2/2 */}
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/berlin.jpg"
-                ></img>
-                <span className="bg-black absolute lg:top-[370px] sm:top-[6px] lg:left-0   text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  Berlin
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
-                  <span>camiladasilvala</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/berlin.jpg"
+                  ></img>
+                  <span className="bg-black absolute lg:top-[370px] sm:top-[6px] lg:left-0   text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    Berlin
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>camiladasilvala</span>
+                  </div>
+                </Link>
               </div>
             </div>
 
             {/* 1/2 */}
             <div className="mosaic-inner flex lg:flex-col lg:gap-10 lg:mt-[120px]  relative sm:mr-[1.5rem] sm:flex-[0 0 auto] ">
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl "
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/amsterdam.jpg"
-                ></img>
-                <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  Amsterdam
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram/>
-                  <span>_federicalillo</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl "
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/amsterdam.jpg"
+                  ></img>
+                  <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    Amsterdam
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>_federicalillo</span>
+                  </div>
+                </Link>
               </div>
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/rome.jpg"
-                ></img>
-                <span className="bg-black absolute lg:top-[370px] lg:left-0 sm:top-[6px] text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  Rome
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
-                  <span>theyellowrome</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/rome.jpg"
+                  ></img>
+                  <span className="bg-black absolute lg:top-[370px] lg:left-0 sm:top-[6px] text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    Rome
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>theyellowrome</span>
+                  </div>
+                </Link>
               </div>
             </div>
             {/* 3 */}
             <div className="mosaic-inner  flex lg:flex-col lg:gap-10 relative sm:mr-[1.5rem] sm:flex-[0 0 auto] ">
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/barcelona.jpg"
-                ></img>
-                <span className="bg-black absolute lg:top-[370px] left-0 sm:top-[10px]  text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  Barcelona
-                </span>
-                <div className="flex flex-row gap-1  text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
-                  <span>noe.gf</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/barcelona.jpg"
+                  ></img>
+                  <span className="bg-black absolute lg:top-[370px] left-0 sm:top-[10px]  text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    Barcelona
+                  </span>
+                  <div className="flex flex-row gap-1  text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>noe.gf</span>
+                  </div>
+                </Link>
               </div>
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/new_zealand.jpg"
-                ></img>
-                <span className="bg-black absolute  top-0 lg:left-0  text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  New Zealand
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
-                  <span>imlucyirving</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/new_zealand.jpg"
+                  ></img>
+                  <span className="bg-black absolute  top-0 lg:left-0  text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    New Zealand
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>imlucyirving</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="mosaic-inner  flex lg:flex-col lg:gap-10 lg:mt-[120px] relative sm:mr-[1.5rem] sm:flex-[0 0 auto]">
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/paris.jpg"
-                ></img>
-                <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  Paris
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
-                  <span>asyaballery</span>
-                </div>
-              </Link>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/paris.jpg"
+                  ></img>
+                  <span className="bg-black absolute  top-0 left-0 text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    Paris
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>asyaballery</span>
+                  </div>
+                </Link>
               </div>
-              <div className='sm:w-[250px] sm:h-[300px]'>
-              <Link href="/">
-                <img
-                  className="rounded-3xl"
-                  src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/dublin.jpg"
-                ></img>
-                <span className="bg-black absolute lg:top-[370px] lg:left-0 sm:top-[4px] text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
-                  Dublin
-                </span>
-                <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
-                  <FaInstagram />
-                  <span>4on5away</span>
-                </div>
-              </Link>
-            </div>
+              <div className="sm:w-[250px] sm:h-[300px]">
+                <Link href="/">
+                  <img
+                    className="rounded-3xl"
+                    src="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_220/pwa/dublin.jpg"
+                  ></img>
+                  <span className="bg-black absolute lg:top-[370px] lg:left-0 sm:top-[4px] text-white mt-[1.5rem] p-[0.25rem 0.5rem] font-extrabold text-lg">
+                    Dublin
+                  </span>
+                  <div className="flex flex-row gap-1 text-[#636c7d] items-center justify-end">
+                    <FaInstagram />
+                    <span>4on5away</span>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -285,7 +285,9 @@ const Travel = () => {
             href="/"
           >
             <span className="font-bold">Read our Blog </span>
-            <div className=''><FaChevronRight /></div>
+            <div className="">
+              <FaChevronRight />
+            </div>
           </Link>
         </div>
       </section>
