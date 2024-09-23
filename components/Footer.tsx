@@ -36,7 +36,7 @@ const Footer = () => {
               height={18}
             ></Image>
 
-            <div className="paragraph flex flex-col gap-4">
+            <div className="paragraph flex flex-col gap-4 md:text-center">
               <h1 className="font-extrabold  leading-6 text-2xl">
                 Join our adventurous community!
               </h1>
@@ -52,7 +52,7 @@ const Footer = () => {
                 <LuSendHorizonal className="text-black z-20 absolute left-2 top-3 " />
               }
               endContent={
-                <button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor flex justify-center items-center border-none w-10 h-8 absolute top-[4px] sm:left-[16rem] lg:left-[21rem] z-10 rounded-xl">
+                <button className="bg-[#f25621] shadow-[0_8px_24px_#f2552159] text-white p-[1rem] cursor flex justify-center items-center border-none w-10 h-8 absolute top-[4px] sm:left-[16rem] lg:left-[21rem] md:left-[22rem] z-10 rounded-xl">
                   <FaArrowRight className="w-10 h-10" />
                 </button>
               }

@@ -17,7 +17,7 @@ const SliderComponent = () => {
     <>
 
     {/* w-[calc(50% + 800px)] */}
- <section className="social-section-wrapper lg:h-[41.25rem] md:h-[43.35rem]  mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex lg:flex-row lg:mt-5 sm:flex-col-reverse md:flex-col-reverse md:justify-between sm:gap-10 relative">
+ <section className="social-section-wrapper lg:h-[41.25rem] md:h-[43.35rem]  mb-0 ml-[calc(50% - 800px)] p-[4rem 0] w-full flex lg:flex-row lg:mt-5 md:mt-8 sm:flex-col-reverse md:flex-col-reverse md:justify-between sm:gap-10 relative">
         <div className="lg:ml-[8rem] sm:ml-[2rem]  lg:w-[29rem] md:w-[40rem] md:max-w-[50rem] md:mx-[12rem]  flex flex-col sm:max-w-[30rem] mb-4 ">
           <h1 className="header font-extrabold leading-10 lg:text-6xl sm:text-5xl tracking-tight sm:text-start md:text-5xl ">
             Go from <span className="text-[#00e0ce]">solo to social </span>, in just a few taps!

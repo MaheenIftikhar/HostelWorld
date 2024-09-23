@@ -75,7 +75,7 @@ const SecondSection = () => {
           <div className="mt-2 border-black rounded shadow-lg z-10 h-10">
             <div className="px-1 py-2">
               <div className="flex w-[350px] justify-start items-center gap-2 p-2 rounded-3xl lg:hidden sm:block">
-                <TbCurrentLocation />
+                <TbCurrentLocation/>
                 Current Location
               </div>
             </div>
@@ -194,7 +194,7 @@ const SecondSection = () => {
           {/* 2main div inside image */}
           <div className=" flex flex-row lg:gap-[4rem] md:gap-[4rem] justify-between items-center">
             {/* heading div */}
-            <div className="hero-headline text-white flex flex-col h-auto lg:left-[10rem]  sm:w-[20rem] lg:max-w-full lg:w-[35rem] md:w-[45rem] lg:gap-[.25rem] sm:gap-1 lg:mt-8 sm:mt-0 lg:min-h-[17.3125rem] justify-center lg:items-start items-center  max-w-[calc(100% - 320px)]">
+            <div className="hero-headline text-white flex flex-col h-auto lg:left-[10rem]  sm:w-[25rem] lg:max-w-full lg:w-[35rem] md:w-[45rem] lg:gap-[.25rem] sm:gap-1  md:text-center lg:mt-8 sm:mt-0 lg:min-h-[17.3125rem] justify-center lg:items-start items-center  max-w-[calc(100% - 320px)]">
               <div className="sm:flex sm:flex-col sm:gap-1 justify-center items-center sm:w-[20rem] lg:max-w-full lg:w-[35rem] md:w-[50rem]">
                 <h1 className="lg:text-6xl font-extrabold sm:text-3xl text-center sm:text-center lg:text-left">
                   Meet your People.
